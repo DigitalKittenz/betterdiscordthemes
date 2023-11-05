@@ -1,13 +1,12 @@
 /**
- * @name coolDudeTheme
+ * @name pgaythemetbh
  * @author digitalKittenz
- * @description kinda cool + futuristic & theres maybe glowing stuff (extra cool)
+ * @description kinda gay tbh
  * @version 0.0.1
  */
 
-
 /*imports*/
-/* u need this import 4 the glow*/
+/* u need this import 4 the glow tnx Gibbu */
 @import url("https://discordstyles.github.io/SoftX/RadialGlow.css");
 /*best font ever*/
 
@@ -19,6 +18,7 @@
  :root {
     /* colors the sidebar*/
     --background-tertiary: black;
+
 }
 #app-mount {
     outline: 1px solid red;
@@ -75,13 +75,43 @@
     text-shadow: 0px 30px 40px , 0 0 8px , 0px 0px 9px , 0 0 150px ;
     box-shadow: 0px 85px 80px , 0px 1px 3px , 1px 0px 10px , 0 0 130px; //glow
 }
-/*main chat area*/
-.chatContent__5dca8{
-    background-color: rgba(12, 1, 1, 0.89);
-    font-family: courier, monospace;
-}
+
 /* top bar thing w the server name*/
 .title_b7d661, .theme-dark .themed_b152d4 {
     background-color: black;!important
 }
 /* the titles down the side are using ::before elements*/
+
+.reactionInner__4135b {
+    font-size: large;
+}
+
+/*main chat area*/
+.chatContent__5dca8{
+    background-color: rgba(12, 1, 1, 0.89);
+    font-family: courier, monospace!important;
+}
+/* this is all the text inside the main chat area*/
+.cozy_f5c119 .contents_f41bb2 {
+    font-family: courier, monospace !important; /*how do i make this more important*/
+-webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+    text-shadow: 0px 85px 80px, 0px 1px 3px, 1px 0px 10px, 0 0 130px;
+/ / glow
+}
+
+    /* i need to directly select instead of just all i think/
+* {
+    font-family:strider!important;
+}*/
+
+/* theme names*/
+.bd-addon-list .bd-addon-header {
+    font-size: larger;
+    color: red;
+    text-shadow:4px 3px 22px, 0 0 0px, 1px -2px 3px, 0 0 184px; ;
+
+}
+.bd-addon-list .bd-description {
+    font-size: 1.2rem;
+    color: red;
+}
