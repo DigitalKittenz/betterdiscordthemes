@@ -1,0 +1,87 @@
+/**
+ * @name coolDudeTheme
+ * @author digitalKittenz
+ * @description kinda cool + futuristic & theres maybe glowing stuff (extra cool)
+ * @version 0.0.1
+ */
+
+
+/*imports*/
+/* u need this import 4 the glow*/
+@import url("https://discordstyles.github.io/SoftX/RadialGlow.css");
+/*best font ever*/
+
+@font-face {
+    font-family: "strider";
+    src: url('https://homestuck.net/resources/fonts/Dave%20Strider%20by%20steampunkgiraffe.ttf');
+}
+
+ :root {
+    /* colors the sidebar*/
+    --background-tertiary: black;
+}
+#app-mount {
+    outline: 1px solid red;
+    font-family: "strider", courier, monospace; /* default font*/
+    font-size: 30px;
+}
+
+* {
+
+    --rs-small-spacing: 2px; /* Spacing between profile image and outer ring on small icons (e.g. member list) | Default: 2px */
+!important;
+    --rs-medium-spacing: 4px; /* Spacing between profile image and outer ring on medium icons (e.g. user popout) | Default: 4px */
+!important;
+    --rs-large-spacing: 4px; /* Spacing between profile image and outer ring on medium icons (e.g. user popout fullscreen) | Default: 4px */
+!important;
+    --rs-small-width: 1.5px; /* Ring width (follows same sizing as above) | Default: 1.5px */
+!important;
+    --rs-medium-width: 2px; /* Default: 2px */
+!important;
+    --rs-large-width: 2px; /* Default: 2px */
+!important;
+    /* Customizable colors */
+    --rs-online-color: #43b581; /* Default: #43b581 */
+!important;
+    --rs-idle-color: #faa61a; /* Default: #faa61a */
+!important;
+    --rs-dnd-color: #f04747; /* Default: #f04747 */
+!important;
+    --rs-offline-color: #636b75; /* Default: #636b75 */
+!important --rs-streaming-color: #643da7; /* Default: #643da7 */
+!important;
+    --rs-invisible-color: #747f8d; /* Default: #747f8d */
+!important;
+    --rs-phone-color: var(--rs-online-color); /* Color of the phone for mobile users | Default: var(--rs-online-color) */
+!important;
+    --rs-phone-visible: block; /* Visibility of the phone for mobile users | Default: block */
+!important;
+}
+
+
+/* usernames font */
+.members__9f47b {
+    font-weight: bold;
+    font-family: "strider", system-ui!important;
+    text-shadow: 0px 85px 80px , 0px 1px 3px , 1px 0px 10px , 0 0 130px; //glow
+    font-size:larger;
+}
+#app-mount .wrapper_edb6e0 rect {
+    border-radius: var(--avatar-circle);
+    border-bottom-right-radius: var(--avatar-rounded);
+    border: 0.5px solid black; /*bro fuck this*/
+    /* these variables dont exist here*/
+    box-shadow: 0 0 calc(var(--glow-intensity) * 10px) var(--rs-online-color);
+    text-shadow: 0px 30px 40px , 0 0 8px , 0px 0px 9px , 0 0 150px ;
+    box-shadow: 0px 85px 80px , 0px 1px 3px , 1px 0px 10px , 0 0 130px; //glow
+}
+/*main chat area*/
+.chatContent__5dca8{
+    background-color: rgba(12, 1, 1, 0.89);
+    font-family: courier, monospace;
+}
+/* top bar thing w the server name*/
+.title_b7d661, .theme-dark .themed_b152d4 {
+    background-color: black;!important
+}
+/* the titles down the side are using ::before elements*/
