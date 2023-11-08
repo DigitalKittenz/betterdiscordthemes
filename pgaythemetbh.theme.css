@@ -79,7 +79,7 @@ div div aside div div > * {
 }
 /* member status custom status*/
 div div aside div div div div div div div div{
-    font-size: 1rem;
+    font-size: 1.1rem;
     box-shadow: none;
     text-shadow: none;
 }
@@ -87,6 +87,7 @@ div div aside div div div div div div div div{
 div div aside div [class^="avatarDecoration"] {/* POSSIBLY COULD break if namechanged hope it doesnt*/
 display:none;
 }
+
 #app-mount [class^=".wrapper"]{ /* im cheating by using matches. possibly could break*/
     border-radius: var(--avatar-circle);
     border-bottom-right-radius: var(--avatar-rounded);
@@ -95,26 +96,14 @@ display:none;
     box-shadow: var(--dumb-glow);
 }
 
-
-/* top bar thing w the server name*/
-.title_b7d661, .theme-dark .themed_b152d4 { /* name breakable */
-    background-color: black;!important;
-    font-family: var(--mono-font);
-}
-/* the titles down the side are using ::before elements*/
-.reactionInner__4135b { /*name breakable*/
-    font-size: large;
-}
-
 /*main chat area*/
 div ol { /* main chat area*/
     background-color: var(--bg-color);
     font-family: var(--mono-font);
-
-
 }
 
-li div > img:first-of-type{ /* main chat AVATAR*/
+/* main chat AVATAR*/
+li div > img:first-of-type{
     border: 2px outset var(--chat-avatar-border);
     mask: none;
     display: block;
@@ -124,14 +113,31 @@ li div > img:first-of-type{ /* main chat AVATAR*/
     stroke: var(--rs-idle-color);
 }
 
-
-
 /* this is all the text inside the main chat area*/
 .cozy_f5c119 .contents_f41bb2 { /*name breakable*/
     font-family: var(--mono-font);
 -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
     text-shadow: var(--dumb-glow);
 }
+/* messages in the main chat area*/
+div div ol li div div div {
+  /* dont put important 4 any colors if ur usin the color plugin*/
+}
+
+/* the banner 2 the left w the channel names*/
+li div div div div{
+    font-family: var(--mono-font);
+    color:white!important;
+    transition: color 0.4s linear;
+    transition-delay: 0s;
+}
+
+/*hovering over the channel names*/
+li div div div div:hover{
+    color:red!important;
+    text-shadow: var(--dumb-glow);
+}
+
 
 time { /*time nxt 2 main chat msgs*/
     font-size: 1.8em;
@@ -155,10 +161,13 @@ h3 span span:first-child{
     color: red;
 }
 /* this is the title name*/
-h1{
+h1:first-of-type{
     color: red!important;
-    font-size: 21px!important;
+    font-size: 1.6em!important;
     font-family: var(--strider-font)!important;
+}
+path{ /* these r all the icon things*/
+    color:red;
 }
 h3{
     color: red!important;
@@ -166,3 +175,8 @@ h3{
     font-family: var(--strider-font)!important;
 }
 
+[class^=".title"], .theme-dark {
+    background-color: black;!important;
+    font-family: var(--mono-font)!important;
+    /* top bar thing w the server name*/
+}
