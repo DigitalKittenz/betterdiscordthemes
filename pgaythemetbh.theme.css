@@ -7,6 +7,7 @@
 
 /*imports*/
 /* u need this import 4 the glow tnx Gibbu */
+/*unfortunately its gna fuck up the icons so now u gta fix that shit */
 @import url("https://discordstyles.github.io/SoftX/RadialGlow.css");
 
 /*best font ever*/
@@ -18,55 +19,35 @@
 
  :root {
 
-    /* colors the sidebar*/
-    --background-tertiary: black;
+
+     /* my variables :3*/
+     --background-tertiary: black;
      --strider-font: "strider", courier, monospace; /* default font*/
      --mono-font: courier, monospace;
      --dumb-glow: 0px 85px 80px , 0px 1px 3px , 1px 0px 10px , 0 0 130px;
      --glow2boogaloo: 0px 30px 40px , 0 0 8px , 0px 0px 9px , 0 0 150px ;
+     --doubleGlow: 0 0 10px red, 0 0 20px red;
+     --doubleWhiteGlow: 0 0 10px white, 0 0 20px white;
      --bg-color: rgba(12, 1, 1, 0.89);
      --chat-avatar-border: rgba(185, 160, 160, 0.58);
-
-     /*tnx gibbu*/
-     --rs-small-spacing: 2px; /* Spacing between profile image and outer ring on small icons (e.g. member list) | Default: 2px */
- !important;
-     --rs-medium-spacing: 4px; /* Spacing between profile image and outer ring on medium icons (e.g. user popout) | Default: 4px */
- !important;
-     --rs-large-spacing: 4px; /* Spacing between profile image and outer ring on medium icons (e.g. user popout fullscreen) | Default: 4px */
- !important;
-     --rs-small-width: 1.5px; /* Ring width (follows same sizing as above) | Default: 1.5px */
- !important;
-     --rs-medium-width: 2px; /* Default: 2px */
- !important;
-     --rs-large-width: 2px; /* Default: 2px */
- !important;
-     /* Customizable colors */
-     --rs-online-color: #43b581; /* Default: #43b581 */
- !important;
-     --rs-idle-color: #faa61a; /* Default: #faa61a */
- !important;
-     --rs-dnd-color: #c7b0b0; /* Default: #f04747 */
- !important;
-     --rs-offline-color: #636b75; /* Default: #636b75 */
- !important --rs-streaming-color: #643da7; /* Default: #643da7 */
- !important;
-     --rs-invisible-color: #747f8d; /* Default: #747f8d */
- !important;
-     --rs-phone-color: var(--rs-online-color); /* Color of the phone for mobile users | Default: var(--rs-online-color) */
- !important;
-     --rs-phone-visible: block; /* Visibility of the phone for mobile users | Default: block */
- !important;
-     /*no tnx gibbu*/
-}
+     --off-red: rgba(255, 0, 0, 0.29);
+     --recordSVG: url(https://github.com/DigitalKittenz/coolSVGs/blob/main/record.svg);
+     --timeSVG: url(https://github.com/DigitalKittenz/coolSVGs/blob/main/time.svg);
+ }
 
 #app-mount {
     outline: 1px solid red;
     font-family: var(--strider-font);
     font-size: 30px;
 }
+/* HEADER FONT THING*/
+header div:nth-of-type(2) {
+   font-family: var(--strider-font);
+    font-size: 80%;
+}
+
 /* member box*/
 div div aside div div {
-    background-color: black;
     font-weight: bold;
     font-family: var(--strider-font);
     text-shadow: var(--dumb-glow);
@@ -74,8 +55,7 @@ div div aside div div {
 }
 /*shit inside the member boxes so its not all gray*/
 div div aside div div > * {
-    background-color: black;
-    outline: 1px solid black;
+
 }
 /* member status custom status*/
 div div aside div div div div div div div div{
@@ -103,32 +83,30 @@ div ol { /* main chat area*/
 }
 
 /* main chat AVATAR*/
-li div > img:first-of-type{
-    border: 2px outset var(--chat-avatar-border);
+/* js in the future if i want them the same color ig idk how 2 do it tho*/
+/*not emojis tho*/
+li div > img:nth-child(1):not([data-type="emoji"]){
+    border: 2px double red;
     mask: none;
-    display: block;
-    /*idk*/
     fill: transparent !important;
     stroke-width: var(--rs-small-width);
     stroke: var(--rs-idle-color);
+    box-shadow:  var(--doubleGlow);
 }
 
-/* this is all the text inside the main chat area*/
-.cozy_f5c119 .contents_f41bb2 { /*name breakable*/
-    font-family: var(--mono-font);
--webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
-    text-shadow: var(--dumb-glow);
-}
+
 /* messages in the main chat area*/
 div div ol li div div div {
   /* dont put important 4 any colors if ur usin the color plugin*/
+    font-family: var(--mono-font);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+    text-shadow: var(--dumb-glow);
 }
 
 /* the banner 2 the left w the channel names*/
 li div div div div{
     font-family: var(--mono-font);
-    color:white!important;
-    transition: color 0.4s linear;
+    transition: color 0.4s ease;
     transition-delay: 0s;
 }
 
@@ -136,30 +114,91 @@ li div div div div{
 li div div div div:hover{
     color:red!important;
     text-shadow: var(--dumb-glow);
+
+}
+/*CHANNEL COLORS*/
+#channels li:not(#channels ul){
+background-color: black;
 }
 
 
-time { /*time nxt 2 main chat msgs*/
-    font-size: 1.8em;
+/* unread ball */
+#channels [class^="unread"]{
+    background-color: red;
 }
-
+/*unreads*/
+*[aria-label^="unread"] {
+    background-color: var(--off-red)!important;
+    color: white!important;
+}
+/*hoverin over the unreads*/
+*[aria-label^="unread"]:hover{
+    background-color:black!important;
+}
 /* username inside the main chat area*/
-h3 span span:first-child{
+h3 span span:first-of-type{
     text-shadow:var(--dumb-glow);
-    font-size: 1.4em;
+    font-size: 25px;
+    font-family: var(--strider-font)!important;
+    letter-spacing: 0;
+}
+
+/*time obviously*/
+[id^="message-timestamp"]{
+    font-size: 20px;
+    font-family: var(--strider-font)!important;
+    letter-spacing: 1px;
+}
+
+/* hey the actual real life santa just tagged u in his msg wtf */
+[class*="mentioned"] {
+    position: relative;
+    box-shadow: var(--doubleGlow);
+    border-left: 8px solid red;
+    border-bottom: 0;
+}
+/* adds transparancy 2 the red mention*/
+[class*="mentioned"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--off-red);
+    opacity: 0.5;
+    z-index: -1;
+}
+/* chat msg count but also the symbols 4 r names*/
+div img:last-child{
+    border:none!important;
+}
+
+[class^=".reactionCount"]{
+    background-color: pink!important;
 }
 
 /* theme names*/
 .bd-addon-list .bd-addon-header {
-    font-size: larger;
+    font-size: 35px;
     color: red;
-    text-shadow:var(--glow2boogaloo);
+    text-shadow:var(--dumb-glow);
+}
+.bd-addon-list .bd-description {
+    font-size: 14px;
+    color: red;
+    font-family: var(--mono-font);
+}
+/* all bd stuff is the better discord setting stuff lmao*/
+.bd-settings-title:not(.bd-settings-group-title) {
+    font-size: 35px;
+}
+.bd-search-wrapper{
+    padding-right: 20px;
 }
 
-.bd-addon-list .bd-description {
-    font-size: 1.2rem;
-    color: red;
-}
+
+
 /* this is the title name*/
 h1:first-of-type{
     color: red!important;
@@ -180,3 +219,202 @@ h3{
     font-family: var(--mono-font)!important;
     /* top bar thing w the server name*/
 }
+/* u got 100 NEW MESSAGES read ur chat smh */
+[class^="newMessagesBar"]{
+    background-color: red;
+}
+[class^="newMessagesBar"] > * {
+    font-family: var(--strider-font);
+    font-size: 0.8em;
+}
+/* now the app icon will DISAPPEAR (ʃƪ¬‿¬) */
+img[alt="App Icon"] {
+   z-index: 5;
+    position: relative;
+    display: none;
+}
+/* (∩｀-´)⊃━☆ﾟ.*･｡ﾟ new icon go */
+.tutorialContainer__890ea .childWrapper__01b9c::after{
+    content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/record.svg");
+    position: relative;
+    top: -13px;
+    left: -15px;
+    height: 21px;
+    width: 21px;
+    z-index: 0;
+}
+
+.tutorialContainer__890ea .childWrapper__01b9c:hover::after{
+    content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/brokenRecord.svg");
+}
+
+/* ugly app icon wrapper */
+.childWrapper__01b9c {
+    background-color: black!important;
+}
+
+[aria-label^="Direct Messages"]{
+    position: relative;
+}
+
+/*brobot*/
+[class*="botText"]::before{
+    content: "bro";
+    margin-left: 1px;
+}
+[class*="botTag"]{
+    height: 30px;
+    width: 40px;
+    color: black;
+    background-color: white;
+}
+/* text message area */
+[class*="slateTextArea"]{
+    font-family: var(--mono-font);
+}
+
+/* dms container*/
+[class*="scrollerContent"]{
+    background-color: black;
+}
+/* 1st dm name */
+[class*="scrollerContent"] h3:nth-child(even){
+    padding-bottom: 0;
+    margin: 1% 0 0;
+    font-size: 1.5em!important;
+    text-shadow: var(--dumb-glow);
+    letter-spacing: 4px;
+}
+/* 2nd dm name */
+[class*="scrollerContent"] h3:nth-child(odd) {
+    padding: 0;
+    font-size: 1em!important;
+    font-family: var(--mono-font)!important;
+}
+/* all the font in the dms but the h3 r time*/
+[class*="scrollerContent"]  *:not(h3):not(time){
+ font-family: courier, monospace!important;
+}
+ button{
+    background-color: red!important;
+    font-weight: bolder;
+    box-shadow: var(--doubleGlow);
+    transition: color 0.4s ease-in-out;
+    transition-delay: 5s;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.68) !important;
+    color: black;
+    box-shadow: var(--doubleWhiteGlow);
+}
+
+a{
+    color: white!important;
+    text-shadow: var(--dumb-glow);
+}
+/* loading screen text */
+.tipTitle_a7615c, .tip__6e299{
+    font-size: 40px;
+    padding-bottom: 15px;
+    color: red;
+}
+/* close button*/
+[class*="closeButton"]{
+    position: sticky;
+    border-radius: 20%;
+    transition: ease-in-out;
+}
+[class*="closeButton"]:hover{
+    background-color: white;
+    border: 2px solid white;
+    box-shadow: var(--doubleWhiteGlow);
+}
+
+/*find or start a convo w sum annoying person*/
+[class^="searchBar"] [class^="searchBarComponent"] {
+    color: black!important;
+    font-family: var(--strider-font);
+    border: 4px outset #6e1e1e;
+    font-size: 19px;
+    text-shadow: var(--doubleGlow);
+    transition: ease-in-out;
+}
+/* hover the same thing*/
+[class^="searchBar"] [class^="searchBarComponent"]:hover {
+    background-color: #6e1e1e;!important;
+    text-shadow: var(--doubleWhiteGlow);
+    border: 4px solid rgb(128, 128, 128);
+    box-shadow: var(--glow2boogaloo);
+}
+/* add friend*/
+[aria-label="Add Friend"] {
+    background-color: black !important;
+    border: 4px solid black;
+    transition: ease-in-out
+    }
+    [aria-label="Add Friend"]:hover{
+        background-color: red!important;
+        color: black;
+        border: 4px solid red;
+        box-shadow: var(--doubleGlow);
+        text-shadow: var(--doubleWhiteGlow);
+    }
+    /* this is where all the names r in ur friends list */
+#online-tab{
+    font-size: 20px;
+    font-family: var(--mono-font);
+    background-color: black;
+    border: none;
+}
+/* friend usernames IN THE FRIENDSLIST*/
+/*any bigger and it looks weird*/
+#online-tab [class^="username"]{
+    font-family: var(--strider-font);
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+    color: red;
+}
+
+[class^="flowerStarContainer"]{
+    position: relative;
+    height: 1px;
+    width: 1px;
+}
+
+[class^="flowerStarContainer"]:after{
+    position: absolute;
+    content: "";
+    background: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/time.svg") no-repeat center center;
+    background-size: 23px 23px;
+    top: -4px;
+    left: -4px;
+    height: 23px;
+    width: 23px;
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @ 750 discord dumbly forgot their breakpoint i stg 🙄
+every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
+@media only screen and (min-width: 750px) {
+    [class*="toolsContainer"]{
+        position: absolute;
+        right: 40px;
+    }
+}
+
+
+/* replace nitro boosts w the time symbol*/
