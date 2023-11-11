@@ -106,8 +106,6 @@ div div ol li div div div {
 /* the banner 2 the left w the channel names*/
 li div div div div{
     font-family: var(--mono-font);
-    transition: color 0.4s ease;
-    transition-delay: 0s;
 }
 
 /*hovering over the channel names*/
@@ -119,6 +117,20 @@ li div div div div:hover{
 /*CHANNEL COLORS*/
 #channels li:not(#channels ul){
 background-color: black;
+}
+/* reactions */
+[id^="message-reactions"]{
+    width: 80px;
+    height: 30px;
+    margin-top: 7px;
+    background-color: white;
+}
+[id^="message-reactions"] [class^="reactionInner"] {
+    background-color: yellow;
+    width: 80px;
+    border-radius: 10%;
+    box-shadow: var(--doubleGlow);
+
 }
 
 
@@ -237,7 +249,7 @@ img[alt="App Icon"] {
 .tutorialContainer__890ea .childWrapper__01b9c::after{
     content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/record.svg");
     position: relative;
-    top: -13px;
+    top: -15px;
     left: -15px;
     height: 21px;
     width: 21px;
@@ -246,15 +258,22 @@ img[alt="App Icon"] {
 
 .tutorialContainer__890ea .childWrapper__01b9c:hover::after{
     content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/brokenRecord.svg");
+    position: relative;
+    top: -13px;
+    left: -15px;
+    height: 3px;
+    width: 3px;
+    z-index: 2;
 }
 
 /* ugly app icon wrapper */
 .childWrapper__01b9c {
     background-color: black!important;
 }
-
-[aria-label^="Direct Messages"]{
+/* when u hover over the app icon*/
+[aria-label="Servers sidebar"] [aria-label^="Direct Messages"]:hover{
     position: relative;
+    content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/brokenRecord.svg");
 }
 
 /*brobot*/
@@ -394,7 +413,12 @@ a{
     width: 23px;
     z-index: 0;
 }
-
+/* the buttons where u go input text to send a msg n stuff */
+[class^=attachButton], [aria-label="Send a gift"], [aria-label="Open GIF picker"], [aria-label="Mute"], [aria-label="Deafen"], [aria-label="User Settings"], [aria-label="Open sticker picker"], [aria-label="Select emoji"]
+{
+    background-color: inherit!important;
+    box-shadow: none;
+}
 
 
 
