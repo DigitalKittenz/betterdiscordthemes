@@ -51,21 +51,21 @@ div div aside div div {
     font-weight: bold;
     font-family: var(--strider-font);
     text-shadow: var(--dumb-glow);
-    font-size:2rem;
+    font-size:2.3rem;
 }
-/*shit inside the member boxes so its not all gray*/
-div div aside div div > * {
 
-}
 /* member status custom status*/
 div div aside div div div div div div div div{
-    font-size: 1.1rem;
+    font-size: 0.9em;
+    font-family: var(--mono-font);
+    letter-spacing: 1px;
     box-shadow: none;
     text-shadow: none;
 }
 /* avatar decoration which messes up sry ig were all uniform here */
-div div aside div [class^="avatarDecoration"] {/* POSSIBLY COULD break if namechanged hope it doesnt*/
+div div aside div [class^="avatarDecoration"] {
 display:none;
+
 }
 
 #app-mount [class^=".wrapper"]{ /* im cheating by using matches. possibly could break*/
@@ -81,6 +81,15 @@ div ol { /* main chat area*/
     background-color: var(--bg-color);
     font-family: var(--mono-font);
 }
+/* this is what the main chat is abt*/
+[class^="topic"], [class^="expandable"]
+{
+font-family: var(--mono-font)!important;
+}
+
+
+
+
 
 /* main chat AVATAR*/
 /* js in the future if i want them the same color ig idk how 2 do it tho*/
@@ -154,7 +163,7 @@ background-color: black;
 }
 /*unreads*/
 *[aria-label^="unread"] {
-    background-color: var(--off-red)!important;
+    background-color: #1f1f23 !important;
     color: white!important;
 }
 /*hoverin over the unreads*/
@@ -191,7 +200,7 @@ h3 span span:first-of-type{
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--off-red);
+    background-color: inherit;
     opacity: 0.5;
     z-index: -1;
 }
@@ -297,18 +306,23 @@ img[alt="App Icon"] {
 }
 [class*="botTag"]{
     height: 30px;
-    width: 40px;
+    width: fit-content;
     color: black;
     background-color: white;
+    font-family: var(--mono-font);
+    margin-left: 10px;
+
 }
 /* text message area */
 [class*="slateTextArea"]{
     font-family: var(--mono-font);
+    color: rgba(255, 255, 255, 0.38);
 }
 
 /* dms container*/
 [class*="scrollerContent"]{
     background-color: black;
+
 }
 /* 1st dm name */
 [class*="scrollerContent"] h3:nth-child(even){
@@ -332,7 +346,6 @@ img[alt="App Icon"] {
     background-color: red!important;
     font-weight: bolder;
     box-shadow: var(--doubleGlow);
-    transition: color 0.4s ease-in-out;
     transition-delay: 5s;
 }
 button:hover{
@@ -362,38 +375,80 @@ a{
     border: 2px solid white;
     box-shadow: var(--doubleWhiteGlow);
 }
+/* main chat search */
+[class^="searchBar"]{
+    font-family: var(--mono-font);
+}
+/*searchbar hover*/
+[class^="searchBar"]:hover{
+
+    box-shadow: var(--doubleGlow);
+}
+
 
 /*find or start a convo w sum annoying person*/
 [class^="searchBar"] [class^="searchBarComponent"] {
     color: black!important;
     font-family: var(--strider-font);
-    border: 4px outset #6e1e1e;
+    border: 4px outset inherit;
     font-size: 19px;
     text-shadow: var(--doubleGlow);
     transition: ease-in-out;
 }
 /* hover the same thing*/
 [class^="searchBar"] [class^="searchBarComponent"]:hover {
-    background-color: #6e1e1e;!important;
+    background-color: red;!important;
     text-shadow: var(--doubleWhiteGlow);
-    border: 4px solid rgb(128, 128, 128);
     box-shadow: var(--glow2boogaloo);
+    border: 2px double black;
 }
-/* add friend*/
+/*online and pending and all and blocked*/
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(4):hover,
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(3):hover,
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(2):hover,
+.item_e4ca95 .item__48dda .themed_b957e8:hover,
+.topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda:hover, .side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda:hover {
+    background-color: red!important;
+    color: black;
+    box-shadow: var(--doubleGlow);
+    text-shadow: var(--doubleWhiteGlow);
+    cursor: pointer;
+}
+
+/* add friend, online*/
 [aria-label="Add Friend"] {
     background-color: black !important;
-    border: 4px solid black;
-    transition: ease-in-out
+    border: 1px inset gainsboro;
+    transition: ease-in-out;
+    height: 32px;
     }
+
     [aria-label="Add Friend"]:hover{
         background-color: red!important;
         color: black;
-        border: 4px solid red;
+        border: 1px solid red;
         box-shadow: var(--doubleGlow);
         text-shadow: var(--doubleWhiteGlow);
     }
+
+
+
+
+
+
+
+
+
+/* boost this server white text*/
+    [class^="shinyButton"] > div{
+        color: white;
+    }
+
+
+
+
     /* this is where all the names r in ur friends list */
-#online-tab{
+#online-tab, #all-tab, #pending-tab, #blocked-tab{
     font-size: 20px;
     font-family: var(--mono-font);
     background-color: black;
@@ -401,15 +456,15 @@ a{
 }
 /* friend usernames IN THE FRIENDSLIST*/
 /*any bigger and it looks weird*/
-#online-tab [class^="username"]{
-    font-family: var(--strider-font);
-    font-size: 20px;
+#online-tab [class^="username"], #all-tab [class^="username"], #pending-tab [class^="username"], #blocked-tab [class^="username"]{
+    font-family: var(--mono-font);
+    font-size: 18px;
     margin-left: 10px;
     margin-bottom: 5px;
-    letter-spacing: 3px;
+    letter-spacing: 0px;
     color: red;
 }
-
+/* this is just the time symbol up the top*/
 [class^="flowerStarContainer"]{
     position: relative;
     height: 1px;
@@ -427,12 +482,24 @@ a{
     width: 23px;
     z-index: 0;
 }
+
+
+
 /* the buttons where u go input text to send a msg n stuff */
-[class^=attachButton], [aria-label="Send a gift"], [aria-label="Open GIF picker"], [aria-label="Mute"], [aria-label="Deafen"], [aria-label="User Settings"], [aria-label="Open sticker picker"], [aria-label="Select emoji"]
+[class^="attachButton"],
+ [aria-label="Mute"], [aria-label="Deafen"], [aria-label="User Settings"], [aria-label="Select emoji"]
 {
-    background-color: inherit!important;
+    background-color: initial !important;
+    box-shadow: inset 0 0 10px red;
+}
+/* no glow on these ones*/
+[aria-label="Send a gift"],[aria-label="Send Message"], [class^="emojiListRow"], [aria-label="Open GIF picker"], [aria-label="Open sticker picker"]
+{
+    background-color: initial!important;
     box-shadow: none;
 }
+
+
 
 /* sidebar thing with all the channel names sry i got lost while typing this*/
 .container__590e2 {
@@ -441,10 +508,10 @@ a{
 }
 
 /*all that random txt on the sidebar and for boosts and levels shit like that*/
-[class^="progressFraction"] *, [class^="goalText"] *{
+[class^="progressFraction"] *, [class^="goalText"] *, [id^="channels"] div [class^=content]{
     font-family: var(--mono-font)!important;
+    color: white;
 }
-
 
 /* i wanna join ur event */
 [class^="channelNotice"]{
@@ -475,9 +542,49 @@ a{
     color: red!important;
     text-shadow: var(--glow2boogaloo);
 }
+/*members area in that section to the right*/
+[class^="members"]:nth-child(2):not(aside):not([class^="membersListNotices"]):not([role="list"]):not(h3){
+    background-color: black;
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-right: 7px solid red;
+    margin-right: 5px;
+    border-bottom-right-radius: 27px;
+    border-top-right-radius: 8px;
+}
+
+/* around images*/
+[class^="imageWrapper"]{
+    box-shadow: var(--doubleGlow);
+}
+/* the text tellin u 2 download the imag*/
+.downloadLink_e5ebe9{
+    font-size: 28px;
+}
 
 
 
+/* this is inside the chat things on the right and when you hover over them*/
+[class^="membersGroup"], [class^="memberInner"] {
+    background-color: black;
+    outline: 1px solid black;
+    letter-spacing: 2px;
+}
+[class^="memberInner"]{
+    border: 2px solid black;
+    padding-bottom: 2px;
+}
+[class^="memberInner"]:hover{
+    background-color: inherit;
+    box-shadow: inset 0 0 10px red;
+}
+
+/*typing dots*/
+[class^="typingDots"]{
+    font-size: 25px!important;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+}
 
 /* @ 750 discord dumbly forgot their breakpoint i stg 🙄
 every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
@@ -487,6 +594,7 @@ every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
         right: 40px;
     }
 }
-
-
-/* replace nitro boosts w the time symbol*/
+/* that thing on the side in the friends area i literlaly cant remember the name o well*/
+.theme-dark .scroller__4b984{
+    background-color: black!important;
+}
