@@ -396,7 +396,8 @@ img[alt="App Icon"] {
 
 /* 1st dm name */
 [class*="scrollerContent"] h3:nth-child(even){
-    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 1.5em!important;
     text-shadow: var(--dumb-glow);
     letter-spacing: 4px;
