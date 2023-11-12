@@ -53,6 +53,9 @@ div div aside div div {
     text-shadow: var(--dumb-glow);
     font-size:2.3rem;
 }
+.name__16feb{
+    font-size: 21px;
+}
 
 /* member status custom status*/
 div div aside div div div div div div div div{
@@ -87,10 +90,6 @@ div ol { /* main chat area*/
 font-family: var(--mono-font)!important;
 }
 
-
-
-
-
 /* main chat AVATAR*/
 /* js in the future if i want them the same color ig idk how 2 do it tho*/
 /*not emojis tho*/
@@ -109,7 +108,9 @@ div div ol li div div div {
   /* dont put important 4 any colors if ur usin the color plugin*/
     font-family: var(--mono-font);
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
-    text-shadow: var(--dumb-glow);
+    text-shadow: var(--glow2boogaloo);
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 /* the banner 2 the left w the channel names*/
@@ -152,11 +153,6 @@ background-color: black;
     position: relative;
 
 }
-
-
-
-
-
 /* unread ball */
 #channels [class^="unread"]{
     background-color: red;
@@ -192,7 +188,7 @@ h3 span span:first-of-type{
     border-left: 8px solid red;
     border-bottom: 0;
 }
-/* adds transparancy 2 the red mention*/
+/* adds transparency 2 the red mention*/
 [class*="mentioned"]::before {
     content: "";
     position: absolute;
@@ -339,20 +335,66 @@ img[alt="App Icon"] {
     font-family: var(--mono-font)!important;
 }
 /* all the font in the dms but the h3 r time*/
-[class*="scrollerContent"]  *:not(h3):not(time){
+[class*="scrollerContent"]  *:not(h3):not(time):not(h1):not(h1 span span):not(h2 span span):not(h3 span span){
  font-family: courier, monospace!important;
 }
- button{
+/* this is the markup #kinda talk in the main chat area*/
+[class^="scrollerContent"] h1 span span, [class^="scrollerContent"] h2 span span, [class^="scrollerContent"] h3 span span{
+    font-family: var(--strider-font);
+}
+/* sizes of the # markup txt */
+[class^="scrollerContent"] h1 span span{
+    font-size: 60px;
+}
+[class^="scrollerContent"] h2 span span{
+    font-size: 40px;
+    color: red;
+}
+[class^="scrollerContent"] h3 span span{
+    font-size: 30px;
+}
+/*buttons u need 2 style*/
+#library-inventory-tab button,
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div > nav > div > div.premiumTab__57bdc.item__48dda.selected__5711d.themed_b957e8 > div.background__584e7.selectedBackground_d847da,
+#activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button,
+#profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button,
+#profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(3) > div > button,
+#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(6) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4,
+#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) > div > button,
+#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(4) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4,
+#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(3) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4,
+#my-account-tab > div > div:nth-child(1) > div.children_b15c64 > div > div.userInfo__8f826 > button,
+#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.settings__6ed8a > div.children_b15c64 > div:nth-child(2) > button,
+#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div:nth-child(2) > button,
+#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div:nth-child(1) > button,
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.sidebar_ded4b5 > nav > div.container__30406 > div > button,
+.scroller_f0f183 button, [class^="privateChannels"] button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div.layer_ad604d > div > div > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignCenter__84269.noWrap__5c413.header__6d5ea.header__7133e.separator__925e8 > button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div:nth-child(3) > div > div > div.flex_f5fbb7.horizontalReverse_dc209c.justifyStart__42744.alignStretch_e239ef.noWrap__5c413.footer__89240.footer_e2dd9f.footerSeparator__57d95 > div > button.button_bf084e.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeMedium_c6fa98.grow__4c8a4, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div:nth-child(3) > div > div > div.content__764ce.content__3013a.thin_b1c063.scrollerBase_dc3aa9 > div:nth-child(2) > div > div > div.form__13b4f > div:nth-child(5) > button
+{
     background-color: red!important;
     font-weight: bolder;
     box-shadow: var(--doubleGlow);
-    transition-delay: 5s;
 }
-button:hover{
+#library-inventory-tab button:hover,
+#activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button:hover,
+#profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button:hover,
+#profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(3) > div > button:hover,
+#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(6) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover,
+#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) > div > button:hover,
+#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(4) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover,
+#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(3) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover,
+#my-account-tab > div > div:nth-child(1) > div.children_b15c64 > div > div.userInfo__8f826 > button:hover,
+#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.settings__6ed8a > div.children_b15c64 > div:nth-child(2) > button:hover,
+#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div:nth-child(2) > button:hover,
+#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div:nth-child(1) > button:hover,
+button:hover, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.sidebar_ded4b5 > nav > div.container__30406 > div > button:hover{
     background-color: rgba(255, 255, 255, 0.68) !important;
-    color: black;
     box-shadow: var(--doubleWhiteGlow);
 }
+
+
+
+
+
 
 a{
     color: white!important;
@@ -431,21 +473,10 @@ a{
         text-shadow: var(--doubleWhiteGlow);
     }
 
-
-
-
-
-
-
-
-
 /* boost this server white text*/
     [class^="shinyButton"] > div{
         color: white;
     }
-
-
-
 
     /* this is where all the names r in ur friends list */
 #online-tab, #all-tab, #pending-tab, #blocked-tab{
@@ -461,7 +492,7 @@ a{
     font-size: 18px;
     margin-left: 10px;
     margin-bottom: 5px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: red;
 }
 /* this is just the time symbol up the top*/
@@ -483,8 +514,6 @@ a{
     z-index: 0;
 }
 
-
-
 /* the buttons where u go input text to send a msg n stuff */
 [class^="attachButton"],
  [aria-label="Mute"], [aria-label="Deafen"], [aria-label="User Settings"], [aria-label="Select emoji"]
@@ -498,8 +527,6 @@ a{
     background-color: initial!important;
     box-shadow: none;
 }
-
-
 
 /* sidebar thing with all the channel names sry i got lost while typing this*/
 .container__590e2 {
@@ -563,8 +590,6 @@ a{
     font-size: 28px;
 }
 
-
-
 /* this is inside the chat things on the right and when you hover over them*/
 [class^="membersGroup"], [class^="memberInner"] {
     background-color: black;
@@ -584,8 +609,15 @@ a{
 [class^="typingDots"]{
     font-size: 25px!important;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+    text-shadow: var(--doubleGlow);
 }
-
+/* idk wtf i did here but its massive and black im hiding it*/
+.positionContainer__0c914 {
+    background-color: transparent!important;
+    border: 2px solid red;
+    position: relative;
+    left: 50px;
+}
 /* @ 750 discord dumbly forgot their breakpoint i stg 🙄
 every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
 @media only screen and (min-width: 750px) {
@@ -597,4 +629,56 @@ every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
 /* that thing on the side in the friends area i literlaly cant remember the name o well*/
 .theme-dark .scroller__4b984{
     background-color: black!important;
+    border-right: 4px double red;
 }
+/* the user thing down the bottom with your name and online status w/e*/
+.theme-dark .container_ca50b9
+{
+
+    border-bottom: 2px solid red;
+
+    border-right: 4px double red;
+    background-color: black!important;
+}
+
+/* server name*/
+header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
+   font-family: var(--strider-font);
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: red;
+    margin-left: 6px;
+}
+
+/*guild navigation or servers sidebar*/
+[aria-label="Servers sidebar"]{
+    border-left: 5px solid red;
+    border-top: 2px solid red;
+    border-top-left-radius: 15px;
+}
+
+/* glowing online avatar things up on the right*/
+#app-mount .wrapper_edb6e0 {
+    box-shadow: 0 0 10px rgb(201, 201, 201), 0 0 30px transparent;
+}
+/* settings stuff*/
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.contentRegion__0bec1 > div > div,
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div{
+    background-color: black;
+    font-family: var(--mono-font);
+}
+/*setting subscription stuff*/
+[class^="sectionDescription"], [class^="accountCreditDescription"], .select__0eb48.paymentDropdown__6a89d.lookFilled__3dba3{
+    font-size: 15px;
+}
+/* redeem codes font size*/
+#library-inventory-tab h3{
+    font-size: 25px!important;
+    letter-spacing: 2px;
+    padding-bottom: 3px;
+}
+
+
+/*sidebar settings */
+
+/* I NEED THE WALLPAPER THINGS*/
