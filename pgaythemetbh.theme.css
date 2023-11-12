@@ -28,8 +28,6 @@
      --bg-color: rgba(12, 1, 1, 0.89);
      --chat-avatar-border: rgba(185, 160, 160, 0.58);
      --off-red: rgba(255, 0, 0, 0.29);
-     --recordSVG: url(https://github.com/DigitalKittenz/coolSVGs/blob/main/record.svg);
-     --timeSVG: url(https://github.com/DigitalKittenz/coolSVGs/blob/main/time.svg);
  }
 
 #app-mount {
@@ -469,7 +467,7 @@ a{
 
     /* this is where all the names r in ur friends list */
 #online-tab::before, #all-tab::before, #pending-tab::before, #blocked-tab::before {
-    content: "";
+    content: "hi";
     display: block;
     position: absolute;
     top: 0;
@@ -482,6 +480,7 @@ a{
     opacity: 0.1; /* adjust this value to change the image opacity */
     z-index: 0; /* this makes sure the image stays behind the text */
 }
+
 
 #online-tab, #all-tab, #pending-tab, #blocked-tab {
     font-size: 20px;
@@ -732,7 +731,7 @@ header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
     border-bottom: 2px solid red;
     margin-bottom: 1px;
 }
-
+/* active now thing*/
 .container__0a6a9:before {
     content: "";
     width: 100%;
@@ -744,12 +743,44 @@ header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
     opacity: 0.02;
     position: absolute;
     z-index: 99;
-    left: 9.6vw;
-    background-size: 30% auto;
+    left: 271px;
+    background-size: 8% auto;
 }
-.container__0a6a9 {
-    background: transparent;
+/* background image on the place where u go 2 change ur server profile */
+.customizationSection__16fec:last-child:not(.withDivider_c2ce0d)::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 0;
+    opacity: 0.08;
+    background-image: url("https://raw.githubusercontent.com/DigitalKittenz/coolSVGs/main/pics/dave.JPG");
+}
+
+.customizationSection__16fec:last-child:not(.withDivider_c2ce0d){
+   position: relative;
+}
+.header__123bf{
     position: relative;
+    font-family: var(--mono-font);
+}
+.header__123bf::after{
+    content: "theme by digitalKittenz :3";
+    position: absolute;
+    top: 88vh;
+    color: #ff6ff2;
+    font-weight: lighter;
+    font-size: 12px;
+    font: var(--mono-font);
+    opacity: 0.4;
+    width: 350px;
+    height: 180px;
+    left: 10px;
 }
 
 /* @ 750px width discord dumbly forgot their breakpoint i stg 🙄
@@ -760,6 +791,3 @@ every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
         right: 40px;
     }
 }
-
-
-/* I NEED THE WALLPAPER THINGS*/
