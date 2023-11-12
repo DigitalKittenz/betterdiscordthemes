@@ -327,9 +327,10 @@ img[alt="App Icon"] {
     content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/record.svg");
     position: relative;
     top: -15px;
-    left: -15px;
+    left: -26px;
     height: 21px;
     width: 21px;
+    border: 2px solid black;
     z-index: 0;
 }
 
@@ -347,6 +348,18 @@ img[alt="App Icon"] {
 .childWrapper__01b9c {
     background-color: black!important;
 }
+
+/* friendslist to the left*/
+.layout__59abc {
+    background-color: black;
+}
+.group-spacing-16 .groupStart__56db5, .cozy_f5c119 .messageContent__21e69 {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom:0;
+    margin-bottom: 0;
+}
+
 
 /* when u hover over the app icon*/
 [aria-label="Servers sidebar"] [aria-label^="Direct Messages"]:hover{
