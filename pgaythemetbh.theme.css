@@ -16,10 +16,7 @@
     src: url('https://homestuck.net/resources/fonts/Dave%20Strider%20by%20steampunkgiraffe.ttf');
 }
 
-
  :root {
-
-
      /* my variables :3*/
      --background-tertiary: black;
      --strider-font: "strider", courier, monospace; /* default font*/
@@ -53,6 +50,7 @@ div div aside div div {
     text-shadow: var(--dumb-glow);
     font-size:2.3rem;
 }
+
 .name__16feb{
     font-size: 21px;
 }
@@ -68,7 +66,6 @@ div div aside div div div div div div div div{
 /* avatar decoration which messes up sry ig were all uniform here */
 div div aside div [class^="avatarDecoration"] {
 display:none;
-
 }
 
 #app-mount [class^=".wrapper"]{ /* im cheating by using matches. possibly could break*/
@@ -84,10 +81,15 @@ div ol { /* main chat area*/
     background-color: var(--bg-color);
     font-family: var(--mono-font);
 }
+
 /* this is what the main chat is abt*/
-[class^="topic"], [class^="expandable"]
-{
+[class^="topic"], [class^="expandable"] {
 font-family: var(--mono-font)!important;
+}
+
+/*main chat message this is what u type into the form thing*/
+.form__13a2c{
+    background-color: black;
 }
 
 /* main chat AVATAR*/
@@ -101,7 +103,6 @@ li div > img:nth-child(1):not([data-type="emoji"]){
     stroke: var(--rs-idle-color);
     box-shadow:  var(--doubleGlow);
 }
-
 
 /* messages in the main chat area*/
 div div ol li div div div {
@@ -122,12 +123,13 @@ li div div div div{
 li div div div div:hover{
     color:red!important;
     text-shadow: var(--dumb-glow);
-
 }
+
 /*CHANNEL COLORS*/
 #channels li:not(#channels ul){
 background-color: black;
 }
+
 /* reactions */
 [id^="message-reactions"]{
     width: inherit;
@@ -188,6 +190,7 @@ h3 span span:first-of-type{
     border-left: 8px solid red;
     border-bottom: 0;
 }
+
 /* adds transparency 2 the red mention*/
 [class*="mentioned"]::before {
     content: "";
@@ -200,6 +203,7 @@ h3 span span:first-of-type{
     opacity: 0.5;
     z-index: -1;
 }
+
 /* chat msg count but also the symbols 4 r names*/
 div img:last-child{
     border:none!important;
@@ -215,20 +219,21 @@ div img:last-child{
     color: red;
     text-shadow:var(--dumb-glow);
 }
+
 .bd-addon-list .bd-description {
     font-size: 14px;
     color: red;
     font-family: var(--mono-font);
 }
+
 /* all bd stuff is the better discord setting stuff lmao*/
 .bd-settings-title:not(.bd-settings-group-title) {
     font-size: 35px;
 }
+
 .bd-search-wrapper{
     padding-right: 20px;
 }
-
-
 
 /* this is the title name*/
 h1:first-of-type{
@@ -236,9 +241,11 @@ h1:first-of-type{
     font-size: 1.6em!important;
     font-family: var(--strider-font)!important;
 }
+
 path{ /* these r all the icon things*/
     color:red;
 }
+
 h3{
     color: red!important;
     font-size: 60%!important;
@@ -251,22 +258,23 @@ h3{
     /* top bar thing w the server name*/
 }
 
-
-
 /* u got 100 NEW MESSAGES read ur chat smh */
 [class^="newMessagesBar"]{
     background-color: red;
 }
+
 [class^="newMessagesBar"] > * {
     font-family: var(--strider-font);
     font-size: 0.8em;
 }
+
 /* now the app icon will DISAPPEAR (ʃƪ¬‿¬) */
 img[alt="App Icon"] {
    z-index: 5;
     position: relative;
     display: none;
 }
+
 /* (∩｀-´)⊃━☆ﾟ.*･｡ﾟ new icon go */
 .tutorialContainer__890ea .childWrapper__01b9c::after{
     content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/record.svg");
@@ -292,6 +300,7 @@ img[alt="App Icon"] {
 .childWrapper__01b9c {
     background-color: black!important;
 }
+
 /* when u hover over the app icon*/
 [aria-label="Servers sidebar"] [aria-label^="Direct Messages"]:hover{
     position: relative;
@@ -321,8 +330,8 @@ img[alt="App Icon"] {
 /* dms container*/
 [class*="scrollerContent"]{
     background-color: black;
-
 }
+
 /* 1st dm name */
 [class*="scrollerContent"] h3:nth-child(even){
     padding-bottom: 0;
@@ -337,95 +346,78 @@ img[alt="App Icon"] {
     font-size: 1em!important;
     font-family: var(--mono-font)!important;
 }
+
 /* all the font in the dms but the h3 r time*/
 [class*="scrollerContent"]  *:not(h3):not(time):not(h1):not(h1 span span):not(h2 span span):not(h3 span span){
  font-family: courier, monospace!important;
 }
+
 /* this is the markup #kinda talk in the main chat area*/
 [class^="scrollerContent"] h1 span span, [class^="scrollerContent"] h2 span span, [class^="scrollerContent"] h3 span span{
     font-family: var(--strider-font);
 }
+
 /* sizes of the # markup txt */
 [class^="scrollerContent"] h1 span span{
     font-size: 60px;
 }
+
 [class^="scrollerContent"] h2 span span{
     font-size: 40px;
     color: red;
 }
+
 [class^="scrollerContent"] h3 span span{
     font-size: 30px;
 }
+
 /*buttons u need 2 style*/
-.lookFilled__19298.colorBrandNew_fd170a,
-#library-inventory-tab button, .lookFilled__19298.colorBrand_b2253e,
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div > nav > div > div.premiumTab__57bdc.item__48dda.selected__5711d.themed_b957e8 > div.background__584e7.selectedBackground_d847da,
-#activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button,
-#profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button,
-#profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(3) > div > button,
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(6) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4,
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) > div > button,
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(4) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4,
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(3) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4,
-#my-account-tab > div > div:nth-child(1) > div.children_b15c64 > div > div.userInfo__8f826 > button,
-#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.settings__6ed8a > div.children_b15c64 > div:nth-child(2) > button,
-#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div:nth-child(2) > button,
-#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div:nth-child(1) > button,
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.sidebar_ded4b5 > nav > div.container__30406 > div > button,
-.scroller_f0f183 button, [class^="privateChannels"] button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div.layer_ad604d > div > div > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignCenter__84269.noWrap__5c413.header__6d5ea.header__7133e.separator__925e8 > button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div:nth-child(3) > div > div > div.flex_f5fbb7.horizontalReverse_dc209c.justifyStart__42744.alignStretch_e239ef.noWrap__5c413.footer__89240.footer_e2dd9f.footerSeparator__57d95 > div > button.button_bf084e.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeMedium_c6fa98.grow__4c8a4, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div:nth-child(3) > div > div > div.content__764ce.content__3013a.thin_b1c063.scrollerBase_dc3aa9 > div:nth-child(2) > div > div > div.form__13b4f > div:nth-child(5) > button
+.bd-button, .lookFilled__19298.colorBrandNew_fd170a, #library-inventory-tab button, .lookFilled__19298.colorBrand_b2253e, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div > nav > div > div.premiumTab__57bdc.item__48dda.selected__5711d.themed_b957e8 > div.background__584e7.selectedBackground_d847da, #activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button, #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button, #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(3) > div > button, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(6) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) > div > button, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(4) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(3) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4, #my-account-tab > div > div:nth-child(1) > div.children_b15c64 > div > div.userInfo__8f826 > button, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.settings__6ed8a > div.children_b15c64 > div:nth-child(2) > button, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div:nth-child(2) > button, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div:nth-child(1) > button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.sidebar_ded4b5 > nav > div.container__30406 > div > button, .scroller_f0f183 button, [class^="privateChannels"] button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div.layer_ad604d > div > div > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignCenter__84269.noWrap__5c413.header__6d5ea.header__7133e.separator__925e8 > button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div:nth-child(3) > div > div > div.flex_f5fbb7.horizontalReverse_dc209c.justifyStart__42744.alignStretch_e239ef.noWrap__5c413.footer__89240.footer_e2dd9f.footerSeparator__57d95 > div > button.button_bf084e.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeMedium_c6fa98.grow__4c8a4, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div:nth-child(3) > div > div > div.content__764ce.content__3013a.thin_b1c063.scrollerBase_dc3aa9 > div:nth-child(2) > div > div > div.form__13b4f > div:nth-child(5) > button
 {
     background-color: red!important;
     font-weight: bolder;
     box-shadow: var(--doubleGlow);
 }
-.lookFilled__19298.colorBrandNew_fd170a:hover,
-.lookFilled__19298.colorBrand_b2253e:hover,
-#library-inventory-tab button:hover,
-#activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button:hover,
-#profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button:hover,
-#profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(3) > div > button:hover,
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(6) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover,
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) > div > button:hover,
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(4) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover,
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(3) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover,
-#my-account-tab > div > div:nth-child(1) > div.children_b15c64 > div > div.userInfo__8f826 > button:hover,
-#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.settings__6ed8a > div.children_b15c64 > div:nth-child(2) > button:hover,
-#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div:nth-child(2) > button:hover,
-#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div:nth-child(1) > button:hover,
-button:hover, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.sidebar_ded4b5 > nav > div.container__30406 > div > button:hover{
+
+.bd-button:hover, .lookFilled__19298.colorBrandNew_fd170a:hover, .lookFilled__19298.colorBrand_b2253e:hover, #library-inventory-tab button:hover, #activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button:hover, #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button:hover, #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(3) > div > button:hover, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(6) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) > div > button:hover, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(4) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(3) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover, #my-account-tab > div > div:nth-child(1) > div.children_b15c64 > div > div.userInfo__8f826 > button:hover, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.settings__6ed8a > div.children_b15c64 > div:nth-child(2) > button:hover, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div:nth-child(2) > button:hover, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div:nth-child(1) > button:hover, button:hover, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.sidebar_ded4b5 > nav > div.container__30406 > div > button:hover{
     background-color: rgba(255, 255, 255, 0.68) !important;
     box-shadow: var(--doubleWhiteGlow);
 }
+
 a{
     color: white!important;
 }
+
 /* loading screen text */
 .tipTitle_a7615c, .tip__6e299{
     font-size: 40px;
     padding-bottom: 15px;
     color: red;
 }
+
 /* close button*/
 [class*="closeButton"]{
     position: sticky;
     border-radius: 20%;
     transition: ease-in-out;
 }
+
 [class*="closeButton"]:hover{
     background-color: white;
     border: 2px solid white;
     box-shadow: var(--doubleWhiteGlow);
 }
+
 /* main chat search */
 [class^="searchBar"]{
     font-family: var(--mono-font);
 }
+
 /*searchbar hover*/
 [class^="searchBar"]:hover{
 
     box-shadow: var(--doubleGlow);
 }
-
 
 /*find or start a convo w sum annoying person*/
 [class^="searchBar"] [class^="searchBarComponent"] {
@@ -436,6 +428,7 @@ a{
     text-shadow: var(--doubleGlow);
     transition: ease-in-out;
 }
+
 /* hover the same thing*/
 [class^="searchBar"] [class^="searchBarComponent"]:hover {
     background-color: red;!important;
@@ -443,12 +436,9 @@ a{
     box-shadow: var(--glow2boogaloo);
     border: 2px double black;
 }
+
 /*online and pending and all and blocked*/
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(4):hover,
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(3):hover,
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(2):hover,
-.item_e4ca95 .item__48dda .themed_b957e8:hover,
-.topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda:hover, .side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda:hover {
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(4):hover, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(3):hover, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(2):hover, .item_e4ca95 .item__48dda .themed_b957e8:hover, .topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda:hover, .side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda:hover {
     background-color: red!important;
     color: black;
     box-shadow: var(--doubleGlow);
@@ -478,12 +468,29 @@ a{
     }
 
     /* this is where all the names r in ur friends list */
-#online-tab, #all-tab, #pending-tab, #blocked-tab{
+#online-tab::before, #all-tab::before, #pending-tab::before, #blocked-tab::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.homestuck.com/images/storyfiles/hs2/04716.gif");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0.1; /* adjust this value to change the image opacity */
+    z-index: 0; /* this makes sure the image stays behind the text */
+}
+
+#online-tab, #all-tab, #pending-tab, #blocked-tab {
     font-size: 20px;
     font-family: var(--mono-font);
     background-color: black;
     border: none;
+    position: relative; /* this is needed for the pseudo-element positioning to work */
 }
+
 /* friend usernames IN THE FRIENDSLIST*/
 /*any bigger and it looks weird*/
 #online-tab [class^="username"], #all-tab [class^="username"], #pending-tab [class^="username"], #blocked-tab [class^="username"]{
@@ -514,12 +521,12 @@ a{
 }
 
 /* the buttons where u go input text to send a msg n stuff */
-[class^="attachButton"],
- [aria-label="Mute"], [aria-label="Deafen"], [aria-label="User Settings"], [aria-label="Select emoji"]
+[class^="attachButton"], [aria-label="Mute"], [aria-label="Deafen"], [aria-label="User Settings"], [aria-label="Select emoji"]
 {
     background-color: initial !important;
     box-shadow: inset 0 0 10px red;
 }
+
 /* no glow on these ones*/
 [aria-label="Send a gift"],[aria-label="Send Message"], [class^="emojiListRow"], [aria-label="Open GIF picker"], [aria-label="Open sticker picker"]
 {
@@ -531,6 +538,7 @@ a{
 .container__590e2 {
     border-right: 4px double red;
     background-color: black!important;
+    border-top:2px solid red;
 }
 
 /*all that random txt on the sidebar and for boosts and levels shit like that*/
@@ -547,18 +555,20 @@ a{
 /* the tick next to interested in joinin sum random event*/
 [class^="buttonIcon"] path{
     color: white;
-
 }
+
 /* the i wanna join ur event text*/
 [class^="joinButton"]{
     font-family: var(--mono-font);
     font-weight: 600;
 }
+
 /* event notice all the shit inside that w/e*/
 [class^="channelNotice"] *:not([class^="eventName"]){
     font-family: var(--mono-font);
     color: white;
 }
+
 /* the first heading the letter spacings kinda bad*/
 [class^="channelNotice"] [class^="eventNameClickable"], [class^="channelNotice"] [class^="eventNameClickable"] div {
     letter-spacing: 1px;
@@ -568,6 +578,7 @@ a{
     color: red!important;
     text-shadow: var(--glow2boogaloo);
 }
+
 /*members area in that section to the right*/
 [class^="members"]:nth-child(2):not(aside):not([class^="membersListNotices"]):not([role="list"]):not(h3){
     background-color: black;
@@ -584,6 +595,7 @@ a{
 [class^="imageWrapper"]{
     box-shadow: var(--doubleGlow);
 }
+
 /* the text tellin u 2 download the imag*/
 .downloadLink_e5ebe9{
     font-size: 28px;
@@ -595,10 +607,12 @@ a{
     outline: 1px solid black;
     letter-spacing: 2px;
 }
+
 [class^="memberInner"]{
     border: 2px solid black;
     padding-bottom: 2px;
 }
+
 [class^="memberInner"]:hover{
     background-color: inherit;
     box-shadow: inset 0 0 10px red;
@@ -611,19 +625,12 @@ a{
     text-shadow: var(--doubleGlow);
 }
 
-/* @ 750 discord dumbly forgot their breakpoint i stg 🙄
-every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
-@media only screen and (min-width: 750px) {
-    [class*="toolsContainer"]{
-        position: absolute;
-        right: 40px;
-    }
-}
 /* that thing on the side in the friends area i literlaly cant remember the name o well*/
 .theme-dark .scroller__4b984{
     background-color: black!important;
     border-right: 4px double red;
 }
+
 /* the user thing down the bottom with your name and online status w/e*/
 .theme-dark .container_ca50b9
 {
@@ -640,41 +647,36 @@ header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
     color: red;
     margin-left: 6px;
 }
+
 /*event info*/
 .selected__5711d,.item__48dda
 {
     font-size: 28px;
-
-}
-
-    /*guild navigation or servers sidebar*/
-[aria-label="Servers sidebar"]{
-    border-left: 5px solid red;
-    border-top: 2px solid red;
-    border-top-left-radius: 15px;
 }
 
 /* glowing online avatar things up on the right*/
 #app-mount .wrapper_edb6e0 {
     box-shadow: 0 0 10px rgb(201, 201, 201), 0 0 30px transparent;
 }
+
 /* settings stuff*/
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.contentRegion__0bec1 > div > div,
-#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div{
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.contentRegion__0bec1 > div > div, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div{
     background-color: black;
 }
+
 /*setting subscription stuff*/
 [class^="sectionDescription"], [class^="accountCreditDescription"], .select__0eb48.paymentDropdown__6a89d.lookFilled__3dba3{
     font-size: 25px;
 }
+
 /* redeem codes font size as well as legacy username badge and other text*/
-#library-inventory-tab h3,
-.sectionDescription__5996a,#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div.container_c52416 > div > label
+#library-inventory-tab h3, .sectionDescription__5996a,#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div.container_c52416 > div > label
 {
     font-size: 25px!important;
     letter-spacing: 2px;
     padding-bottom: 3px;
 }
+
 /* settings pswd + authentication */
 [class^="sectionTitle"] h2
 {
@@ -683,14 +685,7 @@ header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
 }
 
 /* the text in the settings*/
-.bd-settings-title.bd-settings-group-title,.bd-setting-item,
-.text-sm-medium__1ba28,.activeGame__99516,
-.billingInformation_ed226c,.subText_a04af9,
-[id^="privacy"] h4, .marginBottom8_f4aae3,.container_c52416,
-.text-sm-normal_e612c7,.marginBottom20__64605,.card__4dc22,
-.description_ef8749,.modeDefault_c1162c,.text-xs-normal__56c35,
-.description_e2d324,.text__1c14c,
-#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.colorStandard__5111e.size14_b2af01.description__7af71.formText_e4d957.marginBottom20__64605.modeDefault_c1162c{
+.bd-addon-controls,.content__96073, .bd-settings-title.bd-settings-group-title,.bd-setting-item, .text-sm-medium__1ba28,.activeGame__99516, .billingInformation_ed226c,.subText_a04af9, [id^="privacy"] h4, .marginBottom8_f4aae3,.container_c52416, .text-sm-normal_e612c7,.marginBottom20__64605,.card__4dc22, .description_ef8749,.modeDefault_c1162c,.text-xs-normal__56c35, .description_e2d324,.text__1c14c, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.colorStandard__5111e.size14_b2af01.description__7af71.formText_e4d957.marginBottom20__64605.modeDefault_c1162c{
     font-family: var(--mono-font);
 }
     /*upload a file dialogue stuff*/
@@ -698,18 +693,73 @@ header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
 {
     font-size: 26px;
 }
+
 .tipSubtext_d3460f{
     font-size: 16px;
 }
+
 /* family card is too small */
 .enableCard__9c362{
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
 /*sidebar settings */
 /*some of the headings in the appearance tab*/
 .headings__9e101, .header_a6f6dd, .marginBottom4__12b08
 {
     font-size: 50px;
 }
+
+/* these are all the channel names*/
+/*guild stuff*/
+.scroller__3d071 svg{
+    box-shadow: var(--doubleGlow);
+    border-radius: 50%;
+}
+
+.scroller__3d071 svg:hover{
+    box-shadow: none;
+    outline: 2px inset red;
+}
+
+/*guild navigation or servers sidebar*/
+[aria-label="Servers sidebar"]{
+    border-left: 5px solid red;
+    border-top: 2px solid red;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15%;
+    border-bottom: 2px solid red;
+    margin-bottom: 1px;
+}
+
+.container__0a6a9:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia3.giphy.com%2Fmedia%2FOZP6jGvPfTapSSLPeg%2F200.gif%3Fcid%3D790b7611wcpjixmjihgzhpnzu6ntrugsx5ghrwawcuzwz9rg%26rid%3D200.gif%26ct%3Dg&f=1&nofb=1&ipt=6883c16d6767be441e2d3d5ffbb4aeb5bd8ffbd0b60ac839b1a684d90e16e9d7&ipo=images") !important;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0.02;
+    position: absolute;
+    z-index: 99;
+    left: 9.6vw;
+    background-size: 30% auto;
+}
+.container__0a6a9 {
+    background: transparent;
+    position: relative;
+}
+
+/* @ 750px width discord dumbly forgot their breakpoint i stg 🙄
+every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
+@media only screen and (min-width: 750px) {
+    [class*="toolsContainer"]{
+        position: absolute;
+        right: 40px;
+    }
+}
+
+
 /* I NEED THE WALLPAPER THINGS*/
