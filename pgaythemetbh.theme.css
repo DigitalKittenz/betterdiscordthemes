@@ -245,11 +245,14 @@ h3{
     font-family: var(--strider-font)!important;
 }
 
-[class^=".title"], .theme-dark {
-    background-color: black;!important;
+[class^=".title"]{
+    background-color: black;
     font-family: var(--mono-font)!important;
     /* top bar thing w the server name*/
 }
+
+
+
 /* u got 100 NEW MESSAGES read ur chat smh */
 [class^="newMessagesBar"]{
     background-color: red;
@@ -354,7 +357,8 @@ img[alt="App Icon"] {
     font-size: 30px;
 }
 /*buttons u need 2 style*/
-#library-inventory-tab button,
+.lookFilled__19298.colorBrandNew_fd170a,
+#library-inventory-tab button, .lookFilled__19298.colorBrand_b2253e,
 #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div > nav > div > div.premiumTab__57bdc.item__48dda.selected__5711d.themed_b957e8 > div.background__584e7.selectedBackground_d847da,
 #activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button,
 #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button,
@@ -374,6 +378,8 @@ img[alt="App Icon"] {
     font-weight: bolder;
     box-shadow: var(--doubleGlow);
 }
+.lookFilled__19298.colorBrandNew_fd170a:hover,
+.lookFilled__19298.colorBrand_b2253e:hover,
 #library-inventory-tab button:hover,
 #activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button:hover,
 #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button:hover,
@@ -390,15 +396,8 @@ button:hover, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePane
     background-color: rgba(255, 255, 255, 0.68) !important;
     box-shadow: var(--doubleWhiteGlow);
 }
-
-
-
-
-
-
 a{
     color: white!important;
-    text-shadow: var(--dumb-glow);
 }
 /* loading screen text */
 .tipTitle_a7615c, .tip__6e299{
@@ -611,13 +610,7 @@ a{
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
     text-shadow: var(--doubleGlow);
 }
-/* idk wtf i did here but its massive and black im hiding it*/
-.positionContainer__0c914 {
-    background-color: transparent!important;
-    border: 2px solid red;
-    position: relative;
-    left: 50px;
-}
+
 /* @ 750 discord dumbly forgot their breakpoint i stg 🙄
 every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
 @media only screen and (min-width: 750px) {
@@ -634,9 +627,7 @@ every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
 /* the user thing down the bottom with your name and online status w/e*/
 .theme-dark .container_ca50b9
 {
-
     border-bottom: 2px solid red;
-
     border-right: 4px double red;
     background-color: black!important;
 }
@@ -649,8 +640,14 @@ header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
     color: red;
     margin-left: 6px;
 }
+/*event info*/
+.selected__5711d,.item__48dda
+{
+    font-size: 28px;
 
-/*guild navigation or servers sidebar*/
+}
+
+    /*guild navigation or servers sidebar*/
 [aria-label="Servers sidebar"]{
     border-left: 5px solid red;
     border-top: 2px solid red;
@@ -665,20 +662,54 @@ header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
 #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.contentRegion__0bec1 > div > div,
 #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div{
     background-color: black;
-    font-family: var(--mono-font);
 }
 /*setting subscription stuff*/
 [class^="sectionDescription"], [class^="accountCreditDescription"], .select__0eb48.paymentDropdown__6a89d.lookFilled__3dba3{
-    font-size: 15px;
+    font-size: 25px;
 }
-/* redeem codes font size*/
-#library-inventory-tab h3{
+/* redeem codes font size as well as legacy username badge and other text*/
+#library-inventory-tab h3,
+.sectionDescription__5996a,#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div.container_c52416 > div > label
+{
     font-size: 25px!important;
     letter-spacing: 2px;
     padding-bottom: 3px;
 }
+/* settings pswd + authentication */
+[class^="sectionTitle"] h2
+{
+    font-family: var(--strider-font);
+    font-size: 33px;
+}
 
-
+/* the text in the settings*/
+.bd-settings-title.bd-settings-group-title,.bd-setting-item,
+.text-sm-medium__1ba28,.activeGame__99516,
+.billingInformation_ed226c,.subText_a04af9,
+[id^="privacy"] h4, .marginBottom8_f4aae3,.container_c52416,
+.text-sm-normal_e612c7,.marginBottom20__64605,.card__4dc22,
+.description_ef8749,.modeDefault_c1162c,.text-xs-normal__56c35,
+.description_e2d324,.text__1c14c,
+#my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.colorStandard__5111e.size14_b2af01.description__7af71.formText_e4d957.marginBottom20__64605.modeDefault_c1162c{
+    font-family: var(--mono-font);
+}
+    /*upload a file dialogue stuff*/
+.optionLabel__254ef
+{
+    font-size: 26px;
+}
+.tipSubtext_d3460f{
+    font-size: 16px;
+}
+/* family card is too small */
+.enableCard__9c362{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 /*sidebar settings */
-
+/*some of the headings in the appearance tab*/
+.headings__9e101, .header_a6f6dd, .marginBottom4__12b08
+{
+    font-size: 50px;
+}
 /* I NEED THE WALLPAPER THINGS*/
