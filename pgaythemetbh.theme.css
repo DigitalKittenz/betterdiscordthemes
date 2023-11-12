@@ -2,7 +2,7 @@
  * @name pgaythemetbh
  * @author digitalKittenz
  * @description kinda gay tbh
- * @version 0.0.3
+ * @version 0.0.4
  */
 
 /*imports*/
@@ -116,6 +116,7 @@ div div ol li div div div {
     font-weight: 500;
     padding-top: 4px;
     padding-bottom: 4px;
+    
 }
 
 /* the banner 2 the left w the channel names*/
@@ -326,7 +327,7 @@ img[alt="App Icon"] {
 .tutorialContainer__890ea .childWrapper__01b9c::after{
     content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/record.svg");
     position: relative;
-    top: -15px;
+    top: -14.5px;
     left: -26px;
     height: 21px;
     width: 21px;
@@ -385,13 +386,14 @@ img[alt="App Icon"] {
 [class*="slateTextArea"]{
     font-family: var(--mono-font);
     color: white;
+ 
 ;
 
 }
 
 /* dms container*/
 [class*="scrollerContent"]{
-    background-color: black;
+    background-color: rgb(111, 10, 10);
 }
 
 /* 1st dm name */
