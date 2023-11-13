@@ -1,0 +1,885 @@
+
+
+
+/*unfortunately its gna fuck up the icons so now u gta fix that shit */
+/*NO GLOW*/
+
+
+
+/*best font ever*/
+@font-face {
+    font-family: "strider";
+    src: url('https://homestuck.net/resources/fonts/Dave%20Strider%20by%20steampunkgiraffe.ttf');
+}
+
+:root {
+    /* my variables :3*/
+    --background-tertiary: black;
+    --strider-font: "strider", courier, monospace; /* default font*/
+    --mono-font: courier, monospace;
+    --dumb-glow: 0px 85px 80px , 0px 1px 3px , 1px 0px 10px , 0 0 130px;
+    --glow2boogaloo: 0px 30px 40px , 0 0 8px , 0px 0px 9px , 0 0 150px ;
+    --doubleGlow: 0 0 10px red, 0 0 20px red;
+    --doubleWhiteGlow: 0 0 10px white, 0 0 20px white;
+    --bg-color: rgb(24, 9, 9);
+    --overlay-color: rgba(12, 1, 1, 0.89);
+    --chat-avatar-border: rgba(185, 160, 160, 0.58);
+    --off-red: rgba(255, 0, 0, 0.29);
+    --background-secondary: black;
+    --plain-glow: 0 0 10px rgb(201, 201, 201), 0 0 30px transparent;
+
+}
+
+#app-mount {
+    font-family: var(--strider-font);
+    font-size: 30px;
+}
+/* HEADER FONT THING*/
+header div:nth-of-type(2) {
+    font-family: var(--strider-font);
+    font-size: 80%;
+}
+
+/* member box*/
+div div aside div div {
+    font-weight: bold;
+    font-family: var(--strider-font);
+    text-shadow: none;
+    font-size:2.3rem;
+}
+
+.name__16feb{
+    font-size: 21px;
+}
+
+/* member status custom status*/
+div div aside div div div div div div div div{
+    font-size: 0.9em;
+    font-family: var(--mono-font);
+    letter-spacing: 1px;
+    box-shadow: none;
+    text-shadow: none;
+}
+/* avatar decoration which messes up sry ig were all uniform here */
+div div aside div [class^="avatarDecoration"] {
+    display:none;
+}
+
+
+
+#app-mount [class^=".wrapper"]{ /* im cheating by using matches. possibly could break*/
+    border-radius: var(--avatar-circle);
+    border-bottom-right-radius: var(--avatar-rounded);
+    /* these variables dont exist here*/
+    text-shadow: none;
+    box-shadow: var(--dumb-glow);
+}
+
+/*main chat area*/
+div ol { /* main chat area*/
+    background-color: var(--bg-color) ;
+    font-family: var(--mono-font);
+}
+
+/* this is what the main chat is abt*/
+[class^="topic"], [class^="expandable"] {
+    font-family: var(--mono-font)!important;
+}
+/* and so is this*/
+.theme-dark .themed_b152d4{
+    background-color: black;
+}
+
+/*main chat message this is what u type into the form thing*/
+.form__13a2c{
+    background-color: black;
+}
+
+/* main chat AVATAR*/
+/* js in the future if i want them the same color ig idk how 2 do it tho*/
+/*not emojis tho*/
+li div > img:nth-child(1):not([data-type="emoji"]){
+    border: 2px double red;
+    mask: none;
+    fill: transparent !important;
+    stroke-width: var(--rs-small-width);
+    stroke: var(--rs-idle-color);
+}
+
+/* messages in the main chat area*/
+div div ol li div div div {
+    /* dont put important 4 any colors if ur usin the color plugin*/
+    font-family: var(--mono-font);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+    text-shadow: none;
+    font-weight: 500;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color:transparent;
+
+}
+
+/* the banner 2 the left w the channel names*/
+li div div div div{
+    font-family: var(--mono-font);
+    background-color: black;
+}
+/* the a link and also the shit around them in the channel section*/
+.wrapper__7bcde, .link__95dc0:before {
+    background-color: black;
+}
+
+/*hovering over the channel names*/
+li div div div div:hover{
+    color:red!important;
+    text-shadow: var(--dumb-glow);
+
+}
+
+/*CHANNEL COLORS*/
+#channels li:not(#channels ul){
+    background-color: black;
+}
+
+
+/* reactions */
+[id^="message-reactions"]{
+    width: inherit;
+    height: inherit;
+    margin-top: 7px;
+}
+
+[id^="message-reactions"] [class^="reactionInner"] {
+    width: 38px;
+    height: 30px;
+    border-radius: 12%;
+    box-shadow: var(--doubleGlow);
+    margin: 0;
+}
+
+[class^="reactionInner"]{
+    width: 50px;
+    font-size: 17px;
+}
+
+[class^="reactionInner"] img{
+    height: 30px;
+    position: relative;
+
+}
+/* unread ball */
+#channels [class^="unread"]{
+    background-color: red;
+}
+/*unreads*/
+*[aria-label^="unread"] {
+    background-color: #1f1f23 !important;
+    color: white!important;
+}
+/*hoverin over the unreads*/
+*[aria-label^="unread"]:hover{
+    background-color:black!important;
+}
+/* username inside the main chat area*/
+h3 span span:first-of-type{
+    text-shadow:var(--dumb-glow);
+    font-size: 25px;
+    font-family: var(--strider-font)!important;
+    letter-spacing: 0;
+}
+
+/*time obviously*/
+[id^="message-timestamp"]{
+    font-size: 20px;
+    font-family: var(--strider-font)!important;
+    letter-spacing: 1px;
+}
+
+/* hey the actual real life santa just tagged u in his msg wtf */
+[class*="mentioned"] {
+    position: relative;
+    box-shadow: var(--doubleGlow);
+    border-left: 8px solid red;
+    border-bottom: 0;
+}
+/* the friends list aside thing and also guild*/
+.enableCard__9c362 , .bd-setting-item .bd-select, .cameraWrapper__1ee6d, .soundButtonSettingContainer__548af , .lookFilled__3dba3.select__0eb48 , .previewMessage__1075c , .radioBar__40e1b.radioPositionLeft__1d40a , .paymentHistory__889da, .paymentHistory__889da *, #app-mount div[data-list-id^="private-channels-"],.topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda, .side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda,.wrapper__555a0 .select__0eb48, .inputDefault__80165, .bioTextArea_a108c9>div, #app-mount div[data-list-id="billing-history"], #app-mount div[data-list-id^="private-channels-"], #app-mount .media-engine-video, .react-datepicker, .react-datepicker__header, .react-datepicker__day--outside-month, .react-datepicker__day--disabled, div[data-list-id^="members-"], div[data-list-id^="members-"]>div ,.themedBackground__6b1b6 ,.textArea__74543 ,.closedFolderIconWrapper__7321f, .highlighted__7bba7,.avatarWithText__17e10, #app-mount div[data-list-id="billing-history"], #app-mount div[data-list-id^="private-channels-"], #app-mount .media-engine-video, .react-datepicker, .react-datepicker__header, .react-datepicker__day--outside-month, .react-datepicker__day--disabled, div[data-list-id^="members-"], div[data-list-id^="members-"]>div {
+    background-color:black;
+}
+
+
+
+
+/* payment history*/
+.paymentHistory__889da *{
+    font-size: 25px!important;
+
+}
+
+.theme-dark .codeRedemptionRedirect_bc7f36{
+    background-color: black;
+
+}
+.bd-addon-list *:not(button):not(svg){
+    background-color: black!important;
+}
+.content__23cab{
+    background-color: transparent;
+}
+#app-mount div[data-list-id^="private-channels-"]{
+    background-color: black!important;
+}
+input{
+    background-color: black;
+    color: black;
+}
+/* moving text over a tiny bit*/
+.textArea__74543{
+    margin-left:15px;
+}
+.highlighted__7bba7{
+    border: 2px solid red;
+    width: 250px;
+}
+.link__2e8e1{
+    gap: 0;
+    width: 50px;
+}
+/* adds transparency 2 the red mention*/
+[class*="mentioned"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* chat msg count but also the symbols 4 r names*/
+div img:last-child{
+    border:none!important;
+}
+
+
+/* theme names*/
+.bd-addon-list .bd-addon-header {
+    font-size: 35px;
+    color: red;
+    text-shadow:none;
+}
+
+.bd-addon-list .bd-description {
+    font-size: 14px;
+    color: red;
+    font-family: var(--mono-font);
+}
+
+/* all bd stuff is the better discord setting stuff lmao*/
+.bd-settings-title:not(.bd-settings-group-title) {
+    font-size: 35px;
+}
+
+.bd-search-wrapper{
+    padding-right: 20px;
+}
+
+/* this is the title name*/
+h1:first-of-type:not(.nickname__3d1d7){
+    color: red!important;
+    font-size: 1.6em!important;
+    font-family: var(--strider-font)!important;
+}
+
+path{ /* these r all the icon things*/
+    color:red;
+}
+
+h3{
+    color: red!important;
+    font-size: 60%!important;
+    font-family: var(--strider-font)!important;
+}
+
+[class^=".title"]{
+    background-color: black;
+    font-family: var(--mono-font)!important;
+    /* top bar thing w the server name*/
+}
+
+/* u got 100 NEW MESSAGES read ur chat smh */
+[class^="newMessagesBar"]{
+    background-color: red;
+}
+
+[class^="newMessagesBar"] > * {
+    font-family: var(--strider-font);
+    font-size: 0.8em;
+}
+
+/* now the app icon will DISAPPEAR (ʃƪ¬‿¬) */
+img[alt="App Icon"] {
+    z-index: 5;
+    position: relative;
+    display: none;
+}
+
+/* (∩｀-´)⊃━☆ﾟ.*･｡ﾟ new icon go */
+.tutorialContainer__890ea .childWrapper__01b9c::after{
+    content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/record.svg");
+    position: relative;
+    top: -15px;
+    left: -16px;
+    height: 21px;
+    width: 21px;
+    border: 2px solid black;
+    z-index: 0;
+}
+
+.tutorialContainer__890ea .childWrapper__01b9c:hover::after{
+    content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/brokenRecord.svg");
+    position: relative;
+    top: -13px;
+    left: -16px;
+    height: 3px;
+    width: 3px;
+    z-index: 2;
+}
+
+/* ugly app icon wrapper */
+.childWrapper__01b9c {
+    background-color: black!important;
+}
+
+/* friendslist to the left*/
+.layout__59abc {
+    background-color: black;
+}
+.group-spacing-16 .groupStart__56db5, .cozy_f5c119 .messageContent__21e69 {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom:0;
+    margin-bottom: 0;
+}
+
+
+/* when u hover over the app icon*/
+[aria-label="Servers sidebar"] [aria-label^="Direct Messages"]:hover{
+    position: relative;
+    content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/brokenRecord.svg");
+}
+
+/*brobot*/
+[class*="botText"]::before{
+    content: "bro";
+    margin-left: 1px;
+}
+[class*="botTag"]{
+    height: 30px;
+    width: fit-content;
+    color: black;
+    background-color: white;
+    font-family: var(--mono-font);
+    margin-left: 10px;
+
+}
+/* text message area */
+[class*="slateTextArea"]{
+    font-family: var(--mono-font);
+    color: white;
+}
+
+/* dms container*/
+[class*="scrollerContent"]{
+    background-color: var(--bg-color);
+
+}
+
+/* 1st dm name */
+[class*="scrollerContent"] h3:nth-child(even){
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.5em!important;
+    text-shadow: var(--dumb-glow);
+    letter-spacing: 4px;
+   
+}
+/* 2nd dm name */
+[class*="scrollerContent"] h3:nth-child(odd) {
+    padding: 0;
+    font-size: 1em!important;
+    font-family: var(--mono-font)!important;
+}
+
+/* all the font in the dms but the h3 r time*/
+[class*="scrollerContent"]  *:not(h3):not(time):not(h1):not(h1 span span):not(h2 span span):not(h3 span span){
+    font-family: courier, monospace!important;
+}
+
+/* this is the markup #kinda talk in the main chat area*/
+[class^="scrollerContent"] h1 span span, [class^="scrollerContent"] h2 span span, [class^="scrollerContent"] h3 span span{
+    font-family: var(--strider-font);
+    
+}
+
+/* sizes of the # markup txt */
+[class^="scrollerContent"] h1 span span{
+    font-size: 60px;
+}
+
+[class^="scrollerContent"] h2 span span{
+    font-size: 40px;
+    color: red;
+}
+
+[class^="scrollerContent"] h3 span span{
+    font-size: 30px;
+}
+
+/*buttons u need 2 style*/
+.lookFilled__19298.colorPrimary__6ed40,.bd-button, .lookFilled__19298.colorBrandNew_fd170a, #library-inventory-tab button, .lookFilled__19298.colorBrand_b2253e, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div > nav > div > div.premiumTab__57bdc.item__48dda.selected__5711d.themed_b957e8 > div.background__584e7.selectedBackground_d847da, #activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button, #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button, #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(3) > div > button, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(6) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) > div > button, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(4) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(3) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4, #my-account-tab > div > div:nth-child(1) > div.children_b15c64 > div > div.userInfo__8f826 > button, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.settings__6ed8a > div.children_b15c64 > div:nth-child(2) > button, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div:nth-child(2) > button, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div:nth-child(1) > button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.sidebar_ded4b5 > nav > div.container__30406 > div > button, .scroller_f0f183 button, [class^="privateChannels"] button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div.layer_ad604d > div > div > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignCenter__84269.noWrap__5c413.header__6d5ea.header__7133e.separator__925e8 > button, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div:nth-child(3) > div > div > div.flex_f5fbb7.horizontalReverse_dc209c.justifyStart__42744.alignStretch_e239ef.noWrap__5c413.footer__89240.footer_e2dd9f.footerSeparator__57d95 > div > button.button_bf084e.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeMedium_c6fa98.grow__4c8a4, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div:nth-child(4) > div:nth-child(3) > div > div > div.content__764ce.content__3013a.thin_b1c063.scrollerBase_dc3aa9 > div:nth-child(2) > div > div > div.form__13b4f > div:nth-child(5) > button
+{
+    background-color: red!important;
+    font-weight: bolder;
+    box-shadow: var(--doubleGlow);
+}
+
+.lookFilled__19298.colorPrimary__6ed40:hover,.bd-button:hover, .lookFilled__19298.colorBrandNew_fd170a:hover, .lookFilled__19298.colorBrand_b2253e:hover, #library-inventory-tab button:hover, #activity-tab > div > div > div.banner_d7a5a9.max-width_df086e > div > div:nth-child(1) > div.button__292ae > button:hover, #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(4) > div > button:hover, #profile-customization-tab > div:nth-child(5) > div > div > div.sectionsContainer_cce45e > div:nth-child(3) > div > button:hover, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(6) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) > div > button:hover, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(4) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover, #profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(3) > div > button.button_afdfd9.lookFilled__19298.colorBrand_b2253e.sizeSmall__71a98.grow__4c8a4:hover, #my-account-tab > div > div:nth-child(1) > div.children_b15c64 > div > div.userInfo__8f826 > button:hover, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.settings__6ed8a > div.children_b15c64 > div:nth-child(2) > button:hover, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div:nth-child(2) > button:hover, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div:nth-child(1) > button:hover, button:hover, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.sidebar_ded4b5 > nav > div.container__30406 > div > button:hover{
+    background-color: rgba(255, 0, 0, 0.68) !important;
+    box-shadow: var(--doubleWhiteGlow);
+}
+
+a{
+    color: white!important;
+}
+
+/* loading screen text */
+.tipTitle_a7615c, .tip__6e299{
+    font-size: 40px;
+    padding-bottom: 15px;
+    color: red;
+}
+
+/* close button*/
+[class*="closeButton"]{
+    position: sticky;
+    border-radius: 20%;
+    transition: ease-in-out;
+}
+
+[class*="closeButton"]:hover{
+    background-color: white;
+    border: 2px solid white;
+    box-shadow: var(--doubleWhiteGlow);
+}
+
+/* main chat search */
+[class^="searchBar"]{
+    font-family: var(--mono-font);
+    background-color: black;
+}
+
+/*searchbar hover*/
+[class^="searchBar"]:hover{
+
+    box-shadow: var(--doubleGlow);
+}
+
+/*find or start a convo w sum annoying person*/
+[class^="searchBar"] [class^="searchBarComponent"] {
+    color: black!important;
+    font-family: var(--strider-font);
+    border: 4px outset inherit;
+    font-size: 19px;
+    text-shadow: var(--doubleGlow);
+    transition: ease-in-out;
+}
+
+/* hover the same thing*/
+[class^="searchBar"] [class^="searchBarComponent"]:hover {
+    background-color: red!important;
+    text-shadow: var(--doubleWhiteGlow);
+    box-shadow: var(--glow2boogaloo);
+
+}
+
+/*online and pending and all and blocked*/
+#app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(4):hover, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(3):hover, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > main > section > div > div.children__32014 > div.tabBar__73938.topPill__0cdf1 > div:nth-child(2):hover, .item_e4ca95 .item__48dda .themed_b957e8:hover, .topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda:hover, .side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda:hover {
+    background-color: red!important;
+    color: black;
+    box-shadow: var(--doubleGlow);
+    text-shadow: var(--doubleWhiteGlow);
+    cursor: pointer;
+}
+
+/* add friend, online*/
+[aria-label="Add Friend"] {
+    background-color: black !important;
+    border: 1px inset gainsboro;
+    transition: ease-in-out;
+    height: 32px;
+}
+
+[aria-label="Add Friend"]:hover{
+    background-color: red!important;
+    color: black;
+    border: 1px solid red;
+    box-shadow: var(--doubleGlow);
+    text-shadow: var(--doubleWhiteGlow);
+}
+
+/* boost this server white text*/
+[class^="shinyButton"] > div{
+    color: white;
+}
+
+/* this is where all the names r in ur friends list */
+#online-tab::before, #all-tab::before, #pending-tab::before, #blocked-tab::before {
+    content: "hi";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.homestuck.com/images/storyfiles/hs2/04716.gif");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0.1; /* adjust this value to change the image opacity */
+    z-index: 0; /* this makes sure the image stays behind the text */
+}
+
+
+#online-tab, #all-tab, #pending-tab, #blocked-tab {
+    font-size: 20px;
+    font-family: var(--mono-font);
+    background-color: black;
+    border: none;
+    position: relative; /* this is needed for the pseudo-element positioning to work */
+}
+
+/* friend usernames IN THE FRIENDSLIST*/
+/*any bigger and it looks weird*/
+#online-tab [class^="username"], #all-tab [class^="username"], #pending-tab [class^="username"], #blocked-tab [class^="username"]{
+    font-family: var(--mono-font);
+    font-size: 18px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 0;
+    color: red;
+}
+/* this is just the time symbol up the top*/
+[class^="flowerStarContainer"]{
+    position: relative;
+    height: 1px;
+    width: 1px;
+}
+
+[class^="flowerStarContainer"]:after{
+    position: absolute;
+    content: "";
+    background: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/time.svg") no-repeat center center;
+    background-size: 23px 23px;
+    top: -4px;
+    left: -4px;
+    height: 23px;
+    width: 23px;
+    z-index: 0;
+}
+
+/* the buttons where u go input text to send a msg n stuff */
+[class^="attachButton"], [aria-label="Mute"], [aria-label="Deafen"], [aria-label="User Settings"], [aria-label="Select emoji"]
+{
+    background-color: initial !important;
+    box-shadow: inset 0 0 10px red;
+}
+
+/* no glow on these ones*/
+[aria-label="Send a gift"],[aria-label="Send Message"], [class^="emojiListRow"], [aria-label="Open GIF picker"], [aria-label="Open sticker picker"]
+{
+    background-color: initial!important;
+    box-shadow: none;
+}
+
+/* sidebar thing with all the channel names sry i got lost while typing this*/
+.container__590e2 {
+    border-right: 4px double red;
+    background-color: black!important;
+    border-top:2px solid red;
+    text-decoration-color: inherit;
+}
+
+
+/*all that random txt on the sidebar and for boosts and levels shit like that*/
+[class^="progressFraction"] *, [class^="goalText"] *, [id^="channels"] div [class^=content]{
+    font-family: var(--mono-font)!important;
+    color: white;
+}
+
+/* i wanna join ur event */
+[class^="channelNotice"]{
+    background-color: black!important;
+}
+
+/* the tick next to interested in joinin sum random event*/
+[class^="buttonIcon"] path{
+    color: white;
+}
+
+/* the i wanna join ur event text*/
+[class^="joinButton"]{
+    font-family: var(--mono-font);
+    font-weight: 600;
+}
+
+/* event notice all the shit inside that w/e*/
+[class^="channelNotice"] *:not([class^="eventName"]){
+    font-family: var(--mono-font);
+    color: white;
+}
+
+/* the first heading the letter spacings kinda bad*/
+[class^="channelNotice"] [class^="eventNameClickable"], [class^="channelNotice"] [class^="eventNameClickable"] div {
+    letter-spacing: 1px;
+    font-family: var(--strider-font);
+    font-size: 25px;
+    font-weight: lighter;
+    color: red!important;
+    text-shadow: var(--glow2boogaloo);
+}
+
+/*members area in that section to the right*/
+[class^="members"]:nth-child(2):not(aside):not([class^="membersListNotices"]):not([role="list"]):not(h3):not(.membersGroup__85843.container_de798d){
+    background-color: black;
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-right: 7px solid red;
+    margin-right: 5px;
+    border-bottom-right-radius: 27px;
+    border-top-right-radius: 8px;
+}
+
+/* around images*/
+[class^="imageWrapper"]{
+    box-shadow: var(--doubleGlow);
+}
+
+/* the text tellin u 2 download the imag*/
+.downloadLink_e5ebe9{
+    font-size: 28px;
+}
+
+/* this is inside the chat things on the right and when you hover over them*/
+[class^="membersGroup"], [class^="memberInner"] {
+    background-color: black;
+    outline: 1px solid black;
+    letter-spacing: 2px;
+}
+
+[class^="memberInner"]{
+    padding-bottom: 2px;
+}
+
+[class^="memberInner"]:hover{
+    background-color: red;
+    box-shadow: inset 0 0 10px red;
+}
+
+/*typing dots*/
+[class^="typingDots"]{
+    font-size: 22px!important;
+    text-shadow: var(--plain-glow);
+}
+
+/* that thing on the side in the friends area i literlaly cant remember the name o well*/
+.theme-dark .scroller__4b984{
+    background-color: black!important;
+    border-right: 4px double red;
+}
+
+/* the user thing down the bottom with your name and online status w/e*/
+.theme-dark .container_ca50b9
+{
+    border-bottom: 2px solid red;
+    border-right: 4px double red;
+    background-color: black!important;
+}
+
+/* server name*/
+header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
+    font-family: var(--strider-font);
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: red;
+    margin-left: 6px;
+}
+
+/*event info*/
+.selected__5711d,.item__48dda
+{
+    font-size: 28px;
+}
+
+/* glowing online avatar things up on the right*/
+#app-mount .wrapper_edb6e0 {
+    box-shadow: var(--plain-glow);
+}
+
+/* settings stuff*/
+.theme-dark .defaultIndicator__855a2 ,.contentColumnDefault_c66386  *, .bd-search-wrapper , .header__6d5ea , .container_bd6694,.preview_f42b5d, .contentPanel__2fdef *, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.contentRegion__0bec1 > div > div, #app-mount > div.appAsidePanelWrapper__714a6 > div.notAppAsidePanel__9d124 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div:nth-child(2) > div > div.sidebarRegion__60457 > div{
+    background-color: black;
+}
+
+/*setting subscription stuff*/
+[class^="sectionDescription"], [class^="accountCreditDescription"], .select__0eb48.paymentDropdown__6a89d.lookFilled__3dba3{
+    font-size: 25px;
+}
+.contentColumnDefault_c66386 *,.button_afdfd9 .contents_fb6220{
+    background-color: transparent;
+}
+
+/* redeem codes font size as well as legacy username badge and other text*/
+#library-inventory-tab h3, .sectionDescription__5996a,#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div.container_c52416 > div > label
+{
+    font-size: 18px!important;
+    letter-spacing: 2px;
+    padding-bottom: 3px;
+}
+
+/* settings pswd + authentication */
+[class^="sectionTitle"] h2
+{
+    font-family: var(--strider-font);
+    font-size: 33px;
+}
+
+/* the text in the settings*/
+.headerText__051c0,.bd-addon-controls,.content__96073, .bd-settings-title.bd-settings-group-title,.bd-setting-item, .text-sm-medium__1ba28,.activeGame__99516, .billingInformation_ed226c,.subText_a04af9, [id^="privacy"] h4, .marginBottom8_f4aae3,.container_c52416, .text-sm-normal_e612c7,.marginBottom20__64605,.card__4dc22, .description_ef8749,.modeDefault_c1162c,.text-xs-normal__56c35, .description_e2d324,.text__1c14c, #my-account-tab > div > div.userSettingsSecurity__03e70.marginTop40__2b1fe > div.children_b15c64 > div.flex_f5fbb7.horizontal__992f6.justifyStart__42744.alignStretch_e239ef.noWrap__5c413 > div.flexChild__6e093 > div > div.children_b15c64 > div.colorStandard__5111e.size14_b2af01.description__7af71.formText_e4d957.marginBottom20__64605.modeDefault_c1162c{
+    font-family: var(--mono-font);
+}
+/* direct messages*/
+.headerText__051c0{
+    color: white;
+}
+/*upload a file dialogue stuff*/
+.optionLabel__254ef
+{
+    font-size: 26px;
+}
+
+.tipSubtext_d3460f{
+    font-size: 16px;
+}
+
+/* family card is too small */
+.enableCard__9c362{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*sidebar settings */
+/*some of the headings in the appearance tab*/
+.headings__9e101, .header_a6f6dd, .marginBottom4__12b08
+{
+    font-size: 50px;
+}
+
+/* these are all the channel names*/
+/*guild stuff*/
+.scroller__3d071 svg{
+    box-shadow: var(--doubleGlow);
+    border-radius: 50%;
+    background-color: black!important;
+}
+
+.scroller__3d071 svg:hover{
+    box-shadow: none;
+    outline: 2px inset red;
+}
+
+/*guild navigation or servers sidebar*/
+[aria-label="Servers sidebar"]{
+    border-left: 5px solid red;
+    border-top: 2px solid red;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15%;
+    border-bottom: 2px solid red;
+    margin-bottom: 1px;
+}
+/* more guild stuff*/
+
+/* active now thing*/
+.container__0a6a9:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia3.giphy.com%2Fmedia%2FOZP6jGvPfTapSSLPeg%2F200.gif%3Fcid%3D790b7611wcpjixmjihgzhpnzu6ntrugsx5ghrwawcuzwz9rg%26rid%3D200.gif%26ct%3Dg&f=1&nofb=1&ipt=6883c16d6767be441e2d3d5ffbb4aeb5bd8ffbd0b60ac839b1a684d90e16e9d7&ipo=images") !important;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0.05;
+    position: absolute;
+    z-index: 99;
+    left: 271px;
+    background-size: 8% auto;
+}
+/* background image on the place where u go 2 change ur server profile */
+.customizationSection__16fec:last-child:not(.withDivider_c2ce0d)::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 0;
+    opacity: 0.08;
+    background-image: url("https://raw.githubusercontent.com/DigitalKittenz/coolSVGs/main/pics/dave.JPG");
+}
+
+.customizationSection__16fec:last-child:not(.withDivider_c2ce0d){
+    position: relative;
+}
+.header__123bf{
+    position: relative;
+    font-family: var(--mono-font);
+}
+/* lol my name*/
+.header__123bf::after{
+    content: "theme by digitalKittenz :3";
+    position: absolute;
+    top: 88vh;
+    color: #ff6ff2;
+    font-weight: lighter;
+    font-size: 12px;
+    font: var(--mono-font);
+    opacity: 0.4;
+    width: 350px;
+    height: 180px;
+    left: 10px;
+}
+/*scrollbar*/
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* CUSTOM status text*/
+.customStatusText_f5aa9a{
+    font-size: 25px;
+}
+
+
+
+/* @ 750px width discord dumbly forgot their breakpoint i stg 🙄
+every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
+@media only screen and (min-width: 750px) {
+    [class*="toolsContainer"]{
+        position: absolute;
+        right: 40px;
+    }
+}
