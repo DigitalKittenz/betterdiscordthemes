@@ -25,7 +25,7 @@
     --glow2boogaloo: 0px 30px 40px , 0 0 8px , 0px 0px 9px , 0 0 150px ;
     --doubleGlow: 0 0 10px red, 0 0 20px red;
     --doubleWhiteGlow: 0 0 10px white, 0 0 20px white;
-    --bg-color: black;
+    --bg-color: rgb(24, 9, 9);
     --overlay-color: rgba(12, 1, 1, 0.89);
     --chat-avatar-border: rgba(185, 160, 160, 0.58);
     --off-red: rgba(255, 0, 0, 0.29);
@@ -211,15 +211,7 @@ h3 span span:first-of-type{
     background-color:black;
 }
 
-/* overlay color of the main chat area*/
-.content__1a4fe:before{
 
-
-    background-color: red;
-    opacity: 0.1;
-    width: 100vw;
-    height: 100vh;
-}
 
 
 /* payment history*/
@@ -343,7 +335,7 @@ img[alt="App Icon"] {
     content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/record.svg");
     position: relative;
     top: -15px;
-    left: -26px;
+    left: -16px;
     height: 21px;
     width: 21px;
     border: 2px solid black;
@@ -354,7 +346,7 @@ img[alt="App Icon"] {
     content: url("https://cdn.jsdelivr.net/gh/DigitalKittenz/coolSVGs@main/brokenRecord.svg");
     position: relative;
     top: -13px;
-    left: -15px;
+    left: -16px;
     height: 3px;
     width: 3px;
     z-index: 2;
