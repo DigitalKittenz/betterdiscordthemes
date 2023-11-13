@@ -32,7 +32,7 @@
     --off-red: rgba(255, 0, 0, 0.29);
     --background-secondary: black;
     --plain-glow: 0 0 10px rgb(201, 201, 201), 0 0 30px transparent;
-
+}
 
 
 #app-mount {
@@ -887,5 +887,4 @@ every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
         position: absolute;
         right: 40px;
     }
-}
 }
