@@ -25,7 +25,8 @@
     --glow2boogaloo: 0px 30px 40px , 0 0 8px , 0px 0px 9px , 0 0 150px ;
     --doubleGlow: 0 0 10px red, 0 0 20px red;
     --doubleWhiteGlow: 0 0 10px white, 0 0 20px white;
-    --bg-color: rgba(12, 1, 1, 0.89);
+    --bg-color: black;
+    --overlay-color: rgba(12, 1, 1, 0.89);
     --chat-avatar-border: rgba(185, 160, 160, 0.58);
     --off-red: rgba(255, 0, 0, 0.29);
     --background-secondary: black;
@@ -68,6 +69,8 @@ div div aside div [class^="avatarDecoration"] {
     display:none;
 }
 
+
+
 #app-mount [class^=".wrapper"]{ /* im cheating by using matches. possibly could break*/
     border-radius: var(--avatar-circle);
     border-bottom-right-radius: var(--avatar-rounded);
@@ -78,7 +81,7 @@ div div aside div [class^="avatarDecoration"] {
 
 /*main chat area*/
 div ol { /* main chat area*/
-    background-color: var(--bg-color);
+    background-color: var(--bg-color) ;
     font-family: var(--mono-font);
 }
 
@@ -116,6 +119,8 @@ div div ol li div div div {
     font-weight: 500;
     padding-top: 4px;
     padding-bottom: 4px;
+    background-color:transparent;
+
 }
 
 /* the banner 2 the left w the channel names*/
@@ -202,10 +207,21 @@ h3 span span:first-of-type{
     border-bottom: 0;
 }
 /* the friends list aside thing and also guild*/
-.enableCard__9c362 , .bd-setting-item .bd-select, .cameraWrapper__1ee6d, .soundButtonSettingContainer__548af , .lookFilled__3dba3.select__0eb48 , .previewMessage__1075c , .cozy_f5c119.wrapper__09ecc, .radioBar__40e1b.radioPositionLeft__1d40a , .paymentHistory__889da, .paymentHistory__889da *, #app-mount div[data-list-id^="private-channels-"],.topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda, .side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda,.wrapper__555a0 .select__0eb48, .inputDefault__80165, .bioTextArea_a108c9>div, #app-mount div[data-list-id="billing-history"], #app-mount div[data-list-id^="private-channels-"], #app-mount .media-engine-video, .react-datepicker, .react-datepicker__header, .react-datepicker__day--outside-month, .react-datepicker__day--disabled, div[data-list-id^="members-"], div[data-list-id^="members-"]>div ,.themedBackground__6b1b6 ,.textArea__74543 ,.closedFolderIconWrapper__7321f, .highlighted__7bba7,.avatarWithText__17e10, #app-mount div[data-list-id="billing-history"], #app-mount div[data-list-id^="private-channels-"], #app-mount .media-engine-video, .react-datepicker, .react-datepicker__header, .react-datepicker__day--outside-month, .react-datepicker__day--disabled, div[data-list-id^="members-"], div[data-list-id^="members-"]>div {
+.enableCard__9c362 , .bd-setting-item .bd-select, .cameraWrapper__1ee6d, .soundButtonSettingContainer__548af , .lookFilled__3dba3.select__0eb48 , .previewMessage__1075c , .radioBar__40e1b.radioPositionLeft__1d40a , .paymentHistory__889da, .paymentHistory__889da *, #app-mount div[data-list-id^="private-channels-"],.topPill__0cdf1 .themed_b957e8.selected__5711d.item__48dda, .side_b4b3f6 .themed_b957e8.selected__5711d.item__48dda,.wrapper__555a0 .select__0eb48, .inputDefault__80165, .bioTextArea_a108c9>div, #app-mount div[data-list-id="billing-history"], #app-mount div[data-list-id^="private-channels-"], #app-mount .media-engine-video, .react-datepicker, .react-datepicker__header, .react-datepicker__day--outside-month, .react-datepicker__day--disabled, div[data-list-id^="members-"], div[data-list-id^="members-"]>div ,.themedBackground__6b1b6 ,.textArea__74543 ,.closedFolderIconWrapper__7321f, .highlighted__7bba7,.avatarWithText__17e10, #app-mount div[data-list-id="billing-history"], #app-mount div[data-list-id^="private-channels-"], #app-mount .media-engine-video, .react-datepicker, .react-datepicker__header, .react-datepicker__day--outside-month, .react-datepicker__day--disabled, div[data-list-id^="members-"], div[data-list-id^="members-"]>div {
     background-color:black;
-
 }
+
+/* overlay color of the main chat area*/
+.content__1a4fe:before{
+
+
+    background-color: red;
+    opacity: 0.1;
+    width: 100vw;
+    height: 100vh;
+}
+
+
 /* payment history*/
 .paymentHistory__889da *{
     font-size: 25px!important;
@@ -385,13 +401,12 @@ img[alt="App Icon"] {
 [class*="slateTextArea"]{
     font-family: var(--mono-font);
     color: white;
-;
-
 }
 
 /* dms container*/
 [class*="scrollerContent"]{
-    background-color: black;
+    background-color: var(--bg-color);
+
 }
 
 /* 1st dm name */
@@ -401,6 +416,7 @@ img[alt="App Icon"] {
     font-size: 1.5em!important;
     text-shadow: var(--dumb-glow);
     letter-spacing: 4px;
+   
 }
 /* 2nd dm name */
 [class*="scrollerContent"] h3:nth-child(odd) {
@@ -417,6 +433,7 @@ img[alt="App Icon"] {
 /* this is the markup #kinda talk in the main chat area*/
 [class^="scrollerContent"] h1 span span, [class^="scrollerContent"] h2 span span, [class^="scrollerContent"] h3 span span{
     font-family: var(--strider-font);
+    
 }
 
 /* sizes of the # markup txt */
@@ -605,8 +622,6 @@ a{
     border-top:2px solid red;
     text-decoration-color: inherit;
 }
-
-
 
 
 /*all that random txt on the sidebar and for boosts and levels shit like that*/
@@ -869,6 +884,9 @@ header > div > div.lineClamp1__92431.text-md-semibold__4cb23.name_c08dbc{
 .customStatusText_f5aa9a{
     font-size: 25px;
 }
+
+
+
 /* @ 750px width discord dumbly forgot their breakpoint i stg 🙄
 every day i go 2 close discord but GUESS WHAT the close buttons just GONE*/
 @media only screen and (min-width: 750px) {
